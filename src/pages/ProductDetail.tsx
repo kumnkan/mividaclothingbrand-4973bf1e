@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { getProductById } from "@/data/products";
 import { ArrowLeft, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -50,15 +51,20 @@ const ProductDetail = () => {
       
       <div className="container-custom py-12">
         <Button variant="ghost" asChild className="mb-8">
-          <Link to={`/${product.gender}`}>
+          <Link to={`/${product.type}`}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to {product.gender === "socks" ? "Socks" : `${product.gender}'s`} Collection
+            Back to {product.type === "socks" ? "Socks" : "T-Shirts"}
           </Link>
         </Button>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Product Image */}
-          <div className="aspect-square bg-secondary overflow-hidden">
+          <div className="relative aspect-square bg-secondary overflow-hidden">
+            {product.isNew && (
+              <Badge className="absolute top-6 left-6 z-10 bg-primary text-primary-foreground font-bold text-base px-4 py-2">
+                NEW
+              </Badge>
+            )}
             <img
               src={product.image}
               alt={product.name}

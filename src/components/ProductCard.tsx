@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
 
 export interface Product {
   id: string;
@@ -7,6 +8,7 @@ export interface Product {
   image: string;
   category: string;
   colors?: string[];
+  isNew?: boolean;
 }
 
 interface ProductCardProps {
@@ -17,6 +19,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Link to={`/product/${product.id}`} className="group block">
       <div className="relative overflow-hidden bg-secondary aspect-square mb-4">
+        {product.isNew && (
+          <Badge className="absolute top-3 left-3 z-10 bg-primary text-primary-foreground font-bold">
+            NEW
+          </Badge>
+        )}
         <img
           src={product.image}
           alt={product.name}

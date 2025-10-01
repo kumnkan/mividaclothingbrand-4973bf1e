@@ -12,105 +12,62 @@ export interface Product {
   colors: string[];
   sizes: string[];
   description: string;
-  gender: "men" | "women" | "kids" | "socks";
+  type: "tshirts" | "socks";
+  isNew?: boolean;
 }
 
 export const products: Product[] = [
-  // Men's Products
+  // New T-Shirt Designs
   {
-    id: "men-crew-black",
+    id: "tshirt-new-1",
+    name: "Mi Rita Signature Black Tee",
+    price: 249.99,
+    image: mensImage,
+    category: "T-Shirts",
+    colors: ["#000000", "#FFFFFF", "#808080"],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    description: "Our newest signature design. Premium cotton with bold Mi Rita branding.",
+    type: "tshirts",
+    isNew: true,
+  },
+  {
+    id: "tshirt-new-2",
+    name: "Mi Rita Essential White Tee",
+    price: 249.99,
+    image: womensImage,
+    category: "T-Shirts",
+    colors: ["#FFFFFF", "#000000", "#808080", "#1E3A8A"],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    description: "Fresh drop! Clean design with exceptional comfort.",
+    type: "tshirts",
+    isNew: true,
+  },
+  
+  // Classic T-Shirt Collection
+  {
+    id: "tshirt-classic-1",
     name: "Classic Crew Neck Tee",
     price: 199.99,
     image: mensImage,
-    category: "Men's T-Shirts",
-    colors: ["#000000", "#FFFFFF", "#808080"],
+    category: "T-Shirts",
+    colors: ["#000000", "#FFFFFF", "#808080", "#8B4513", "#556B2F"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
-    description: "Premium cotton crew neck t-shirt. Perfect for everyday wear.",
-    gender: "men",
+    description: "Our original. Premium cotton crew neck t-shirt. Perfect for everyday wear.",
+    type: "tshirts",
   },
   {
-    id: "men-vneck-white",
+    id: "tshirt-classic-2",
     name: "Essential V-Neck Tee",
     price: 189.99,
-    image: mensImage,
-    category: "Men's T-Shirts",
-    colors: ["#FFFFFF", "#000000", "#1E3A8A"],
+    image: womensImage,
+    category: "T-Shirts",
+    colors: ["#FFFFFF", "#000000", "#1E3A8A", "#DC143C", "#228B22"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
-    description: "Comfortable v-neck design with premium fabric.",
-    gender: "men",
-  },
-  {
-    id: "men-oversized-grey",
-    name: "Oversized Fit Tee",
-    price: 229.99,
-    image: mensImage,
-    category: "Men's T-Shirts",
-    colors: ["#808080", "#000000", "#FFFFFF"],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "Trendy oversized fit for a relaxed, modern look.",
-    gender: "men",
+    description: "Comfortable v-neck design with premium fabric. Part of the originals collection.",
+    type: "tshirts",
   },
   
-  // Women's Products
-  {
-    id: "women-fitted-white",
-    name: "Classic Fitted Tee",
-    price: 189.99,
-    image: womensImage,
-    category: "Women's T-Shirts",
-    colors: ["#FFFFFF", "#000000", "#FFC0CB"],
-    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    description: "Flattering fitted silhouette with premium cotton blend.",
-    gender: "women",
-  },
-  {
-    id: "women-slim-black",
-    name: "Slim Fit Tee",
-    price: 189.99,
-    image: womensImage,
-    category: "Women's T-Shirts",
-    colors: ["#000000", "#FFFFFF", "#800080"],
-    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    description: "Elegant slim fit perfect for any occasion.",
-    gender: "women",
-  },
-  {
-    id: "women-oversized-pink",
-    name: "Oversized Comfort Tee",
-    price: 219.99,
-    image: womensImage,
-    category: "Women's T-Shirts",
-    colors: ["#FFC0CB", "#FFFFFF", "#F5F5DC"],
-    sizes: ["XS", "S", "M", "L", "XL"],
-    description: "Relaxed oversized fit for ultimate comfort.",
-    gender: "women",
-  },
-  
-  // Kids' Products
-  {
-    id: "kids-crew-yellow",
-    name: "Kids' Classic Tee",
-    price: 149.99,
-    image: kidsImage,
-    category: "Kids' T-Shirts",
-    colors: ["#FFFF00", "#0000FF", "#FFC0CB"],
-    sizes: ["4Y", "6Y", "8Y", "10Y", "12Y", "14Y"],
-    description: "Durable and comfortable for active kids.",
-    gender: "kids",
-  },
-  {
-    id: "kids-crew-blue",
-    name: "Kids' Everyday Tee",
-    price: 149.99,
-    image: kidsImage,
-    category: "Kids' T-Shirts",
-    colors: ["#0000FF", "#00FF00", "#800080"],
-    sizes: ["4Y", "6Y", "8Y", "10Y", "12Y", "14Y"],
-    description: "Perfect for school and play.",
-    gender: "kids",
-  },
-  
-  // Socks
+  // Socks Collection
   {
     id: "socks-ankle-black",
     name: "Ankle Socks 3-Pack",
@@ -118,9 +75,9 @@ export const products: Product[] = [
     image: socksImage,
     category: "Socks",
     colors: ["#000000", "#FFFFFF", "#808080"],
-    sizes: ["6-8", "9-11", "12-14"],
-    description: "Comfortable ankle socks for everyday wear.",
-    gender: "socks",
+    sizes: ["1-3", "4-6", "7-9", "10-12"],
+    description: "Comfortable ankle socks for everyday wear. Available in SA shoe sizes.",
+    type: "socks",
   },
   {
     id: "socks-crew-white",
@@ -129,9 +86,9 @@ export const products: Product[] = [
     image: socksImage,
     category: "Socks",
     colors: ["#FFFFFF", "#000000", "#000080"],
-    sizes: ["6-8", "9-11", "12-14"],
-    description: "Classic crew length socks.",
-    gender: "socks",
+    sizes: ["1-3", "4-6", "7-9", "10-12"],
+    description: "Classic crew length socks. Available in SA shoe sizes.",
+    type: "socks",
   },
   {
     id: "socks-sports-grey",
@@ -140,14 +97,33 @@ export const products: Product[] = [
     image: socksImage,
     category: "Socks",
     colors: ["#808080", "#FF0000", "#00FF00"],
-    sizes: ["6-8", "9-11", "12-14"],
-    description: "Performance socks for active lifestyles.",
-    gender: "socks",
+    sizes: ["1-3", "4-6", "7-9", "10-12"],
+    description: "Performance socks for active lifestyles. Available in SA shoe sizes.",
+    type: "socks",
+  },
+  {
+    id: "socks-navy-pattern",
+    name: "Pattern Socks 3-Pack",
+    price: 99.99,
+    image: socksImage,
+    category: "Socks",
+    colors: ["#000080", "#808080", "#000000"],
+    sizes: ["1-3", "4-6", "7-9", "10-12"],
+    description: "Stylish patterned socks. Available in SA shoe sizes.",
+    type: "socks",
   },
 ];
 
-export const getProductsByCategory = (gender: "men" | "women" | "kids" | "socks") => {
-  return products.filter((product) => product.gender === gender);
+export const getProductsByCategory = (type: "tshirts" | "socks") => {
+  return products.filter((product) => product.type === type);
+};
+
+export const getNewArrivals = () => {
+  return products.filter((product) => product.isNew === true);
+};
+
+export const getClassicCollection = () => {
+  return products.filter((product) => product.type === "tshirts" && !product.isNew);
 };
 
 export const getProductById = (id: string) => {
