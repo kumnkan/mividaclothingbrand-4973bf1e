@@ -6,11 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import { getProductById } from "@/data/products";
 import { ArrowLeft, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useCart } from "@/contexts/CartContext";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
   const product = getProductById(id || "");
   const { toast } = useToast();
+  const { addItem, openCart } = useCart();
   
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
@@ -38,6 +40,18 @@ const ProductDetail = () => {
       });
       return;
     }
+    
+    addItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      size: selectedSize,
+      color: selectedColor,
+      quantity: 1,
+    });
+
+    openCart();
     
     toast({
       title: "Added to Cart",

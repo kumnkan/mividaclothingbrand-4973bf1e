@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ShoppingBag, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
 import logo from "@/assets/mi-vida-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isShopOpen, setIsShopOpen] = useState(false);
+  const { openCart, getTotalItems } = useCart();
+  const totalItems = getTotalItems();
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border">
@@ -19,8 +22,13 @@ const Navigation = () => {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="relative" onClick={openCart}>
               <ShoppingBag className="h-5 w-5" />
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
             </Button>
             <Button
               variant="ghost"
