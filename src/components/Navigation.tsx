@@ -14,7 +14,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Mi Vida" className="h-12 w-12" />
+            <img src={logo} alt="MI VIDA" className="h-12 w-12" />
           </Link>
 
           {/* Right Side Actions */}

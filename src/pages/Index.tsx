@@ -86,7 +86,7 @@ const Index = () => {
               Made for Everyday Life
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Mi Vida started as a student-founded brand, creating quality clothing that fits your lifestyle. 
+              MI VIDA started as a student-founded brand, creating quality clothing that fits your lifestyle. 
               Today, we're proud to serve customers across South Africa with premium t-shirts and socks designed for comfort and style.
             </p>
             <Button asChild size="lg">
@@ -154,7 +154,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Mi Vida. All rights reserved. Proudly South African.</p>
+            <p>&copy; 2025 MI VIDA. All rights reserved. Proudly South African.</p>
           </div>
         </div>
       </footer>
