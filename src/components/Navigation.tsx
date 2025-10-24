@@ -11,10 +11,10 @@ const Navigation = () => {
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border">
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="MI VIDA" className="h-12 w-12" />
+            <img src={logo} alt="MI VIDA" className="h-20 w-20 md:h-24 md:w-24" />
           </Link>
 
           {/* Right Side Actions */}
