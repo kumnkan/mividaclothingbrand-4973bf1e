@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-banner.jpg";
+import heroImage from "@/assets/mi-vida-team.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Mi Rita Collection"
+          alt="Mi Vida Collection - Premium T-Shirts and Socks"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="container-custom w-full">
           <div className="max-w-2xl text-white animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tighter">
-              Mi Rita – Wear Your Style
+              Mi Vida – Wear Your Style
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90">
               Premium quality t-shirts and socks. Made for everyday life. Proudly South African.
