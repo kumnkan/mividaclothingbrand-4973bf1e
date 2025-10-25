@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
@@ -94,25 +94,40 @@ const Contact = () => {
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="bg-secondary p-3 rounded-full">
-                      <Mail className="h-5 w-5" />
+                      <Phone className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="font-medium">Email</p>
-                      <a href="mailto:support@mirita.co.za" className="text-muted-foreground hover:text-primary">
-                        support@mirita.co.za
+                      <p className="font-medium">Call Us</p>
+                      <a href="tel:+27691804844" className="text-muted-foreground hover:text-primary block">
+                        069 180 4844
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4">
                     <div className="bg-secondary p-3 rounded-full">
-                      <Phone className="h-5 w-5" />
+                      <MessageCircle className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="font-medium">Phone</p>
-                      <a href="tel:+27123456789" className="text-muted-foreground hover:text-primary">
-                        +27 12 345 6789
+                      <p className="font-medium">WhatsApp</p>
+                      <a href="https://wa.me/27681317556" className="text-muted-foreground hover:text-primary block">
+                        068 131 7556
                       </a>
+                      <a href="https://wa.me/27781553155" className="text-muted-foreground hover:text-primary block">
+                        078 155 3155
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="bg-secondary p-3 rounded-full">
+                      <Mail className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Email</p>
+                      <p className="text-muted-foreground">
+                        Coming soon
+                      </p>
                     </div>
                   </div>
                   
