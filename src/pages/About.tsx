@@ -21,10 +21,10 @@ const About = () => {
             </p>
             
             <p>
-              In a world where most brands focus on women and adults, we noticed something missing — the voice, style, 
-              and confidence of the youth. MI VIDA was built to fill that gap. Our mission is to represent the energy, 
-              hustle, and dreams of the new generation — the kids and young men who are shaping their own paths and 
-              building their own lives.
+              In a world where most brands focus on specific demographics, we noticed something missing — the voice, 
+              style, and confidence of the youth. MI VIDA was built to fill that gap. Our mission is to represent the 
+              energy, hustle, and dreams of the new generation — the young men and women, boys and girls who are 
+              shaping their own paths and building their own lives.
             </p>
             
             <p>
