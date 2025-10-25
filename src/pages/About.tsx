@@ -15,23 +15,25 @@ const About = () => {
           
           <div className="space-y-6 text-lg text-muted-foreground">
             <p>
-              Mi Rita began as a student-founded brand with a simple mission: to create quality clothing 
-              that fits seamlessly into everyday life.
+              MI VIDA is more than just a brand. It's a movement born in the heart of South Africa, Eastern Cape, 
+              Mdantsane by a group of ambitious young entrepreneurs who saw a problem and decided to create a solution.
             </p>
             
             <p>
-              What started as a small project has grown into a national lifestyle brand, serving customers 
-              across South Africa with premium t-shirts and socks that combine comfort, style, and durability.
+              In a world where most brands focus on women and adults, we noticed something missing — the voice, style, 
+              and confidence of the youth. MI VIDA was built to fill that gap. Our mission is to represent the energy, 
+              hustle, and dreams of the new generation — the kids and young men who are shaping their own paths and 
+              building their own lives.
             </p>
             
             <p>
-              We're proud to be a South African brand, committed to delivering excellence in every product. 
-              From our premium cotton fabrics to our attention to detail in every stitch, Mi Rita represents 
-              quality you can trust.
+              The name MI VIDA means "My Life," because that's exactly what we stand for — owning your story, your style, 
+              and your future. Every piece, every design, and every idea we create comes from real experiences, real 
+              struggles, and real ambition.
             </p>
             
             <div className="bg-secondary p-8 my-8">
-              <h2 className="text-2xl font-bold mb-4 text-foreground">Why Choose Mi Rita?</h2>
+              <h2 className="text-2xl font-bold mb-4 text-foreground">Why Choose MI VIDA?</h2>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <span className="font-bold text-foreground">✓</span>
@@ -52,9 +54,9 @@ const About = () => {
               </ul>
             </div>
             
-            <p>
-              Whether you're looking for everyday essentials or want to refresh your wardrobe, Mi Rita 
-              has something for everyone. Thank you for supporting our journey and being part of our story.
+            <p className="font-semibold text-foreground text-xl">
+              MI VIDA is not just a brand — it's a statement.<br />
+              It's your life, your way.
             </p>
           </div>
           
