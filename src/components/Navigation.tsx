@@ -135,7 +135,7 @@ const Navigation = () => {
                   <p className="text-sm font-medium mb-4 text-muted-foreground">Follow Us</p>
                   <div className="flex gap-3">
                     <a 
-                      href="https://www.tiktok.com/@mividasa" 
+                      href="https://www.tiktok.com/@mi.vida970?_t=ZM-90pgefeoMG4&_r=1" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -146,7 +146,7 @@ const Navigation = () => {
                       </svg>
                     </a>
                     <a 
-                      href="https://www.facebook.com/profile.php?id=61571925328712" 
+                      href="https://www.facebook.com/share/1DwrwpB76d/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -155,7 +155,7 @@ const Navigation = () => {
                       <Facebook className="h-5 w-5" />
                     </a>
                     <a 
-                      href="https://www.instagram.com/mivida_sa" 
+                      href="https://www.instagram.com/mivida_sa?igsh=MTd4bHVkbTFzMDVyMw==" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
