@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import {
   Accordion,
   AccordionContent,
@@ -82,6 +83,8 @@ const FAQ = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

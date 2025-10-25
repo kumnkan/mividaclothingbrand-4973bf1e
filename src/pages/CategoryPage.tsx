@@ -1,5 +1,6 @@
 import { useParams, useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByCategory, getNewArrivals } from "@/data/products";
 
@@ -49,6 +50,8 @@ const CategoryPage = () => {
           ))}
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { getProductById } from "@/data/products";
@@ -154,6 +155,8 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

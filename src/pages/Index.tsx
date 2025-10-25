@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import socksImage from "@/assets/socks-category.jpg";
@@ -118,46 +119,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 bg-secondary">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold mb-4">Shop</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link to="/tshirts" className="hover:text-foreground">T-Shirts</Link></li>
-                <li><Link to="/socks" className="hover:text-foreground">Socks</Link></li>
-                <li><Link to="/new-arrivals" className="hover:text-foreground">New Arrivals</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Support</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link to="/faq" className="hover:text-foreground">FAQs</Link></li>
-                <li><Link to="/track-order" className="hover:text-foreground">Track Order</Link></li>
-                <li><Link to="/contact" className="hover:text-foreground">Contact Us</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">About</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link to="/about" className="hover:text-foreground">Our Story</Link></li>
-                <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link to="/terms" className="hover:text-foreground">Terms & Conditions</Link></li>
-                <li><Link to="/privacy" className="hover:text-foreground">Privacy Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 MI VIDA. All rights reserved. Proudly South African.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Package, ExternalLink } from "lucide-react";
@@ -89,6 +90,8 @@ const TrackOrder = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
