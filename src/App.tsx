@@ -7,6 +7,7 @@ import CartDrawer from "@/components/CartDrawer";
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
 import TShirts from "./pages/TShirts";
+import TShirtDetail from "./pages/TShirtDetail";
 import ProductDetail from "./pages/ProductDetail";
 import TrackOrder from "./pages/TrackOrder";
 import Checkout from "./pages/Checkout";
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/tshirts" element={<TShirts />} />
+          <Route path="/tshirt/:id" element={<TShirtDetail />} />
           <Route path="/socks" element={<CategoryPage />} />
           <Route path="/new-arrivals" element={<CategoryPage />} />
           <Route path="/product/:id" element={<ProductDetail />} />
