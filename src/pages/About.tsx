@@ -2,6 +2,15 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import teamPackaging from "@/assets/team-packaging.jpg";
+import teamBoxes from "@/assets/team-boxes.jpg";
+import teamEventPromo from "@/assets/team-event-promo.jpg";
+import teamMember1 from "@/assets/team-member-1.jpg";
+import teamRadio from "@/assets/team-radio.jpg";
+import teamRadio2 from "@/assets/team-radio-2.jpg";
+import teamMarket from "@/assets/team-market.jpg";
+import teamSponsors from "@/assets/team-sponsors.jpg";
+import teamCustomers from "@/assets/team-customers.jpg";
 
 const About = () => {
   return (
@@ -65,6 +74,22 @@ const About = () => {
             <Button asChild size="lg">
               <Link to="/">Shop Our Collection</Link>
             </Button>
+          </div>
+
+          {/* Team Gallery */}
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold mb-8 text-foreground">Our Journey</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <img src={teamPackaging} alt="MI VIDA packaging and products" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamBoxes} alt="MI VIDA branded boxes" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamEventPromo} alt="MI VIDA event promotion" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamMember1} alt="MI VIDA team member at event" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamRadio} alt="MI VIDA team at radio station" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamRadio2} alt="MI VIDA team promoting products" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamMarket} alt="MI VIDA at market event" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamSponsors} alt="MI VIDA sponsorships" className="w-full h-64 object-cover rounded-lg" />
+              <img src={teamCustomers} alt="Happy MI VIDA customers" className="w-full h-64 object-cover rounded-lg" />
+            </div>
           </div>
         </div>
       </div>
