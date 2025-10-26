@@ -15,7 +15,7 @@ const Checkout = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [step, setStep] = useState(1);
-  const [shippingMethod, setShippingMethod] = useState<"pep" | "courier">("courier");
+  const [shippingMethod, setShippingMethod] = useState<"paxi-standard" | "paxi-express" | "courier">("courier");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,8 +29,9 @@ const Checkout = () => {
   });
 
   const shippingCosts = {
-    pep: 45,
-    courier: 60,
+    "paxi-standard": 60,
+    "paxi-express": 110,
+    courier: 150,
   };
 
   const totalAmount = getTotalPrice() + shippingCosts[shippingMethod];
@@ -133,27 +134,38 @@ const Checkout = () => {
 
                 <div>
                   <Label className="text-lg font-bold mb-4 block">Delivery Method</Label>
-                  <RadioGroup value={shippingMethod} onValueChange={(value: "pep" | "courier") => setShippingMethod(value)}>
+                  <RadioGroup value={shippingMethod} onValueChange={(value: "paxi-standard" | "paxi-express" | "courier") => setShippingMethod(value)}>
                     <div className="flex items-center space-x-2 border border-border p-4 rounded-lg mb-3">
                       <RadioGroupItem value="courier" id="courier" />
                       <Label htmlFor="courier" className="flex items-center gap-3 cursor-pointer flex-1">
                         <Truck className="h-5 w-5" />
                         <div className="flex-1">
                           <p className="font-bold">Courier Guy - Door-to-door</p>
-                          <p className="text-sm text-muted-foreground">2-3 business days</p>
+                          <p className="text-sm text-muted-foreground">3-5 business days</p>
                         </div>
-                        <span className="font-bold">R 60.00</span>
+                        <span className="font-bold">R 150.00</span>
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2 border border-border p-4 rounded-lg mb-3">
+                      <RadioGroupItem value="paxi-express" id="paxi-express" />
+                      <Label htmlFor="paxi-express" className="flex items-center gap-3 cursor-pointer flex-1">
+                        <Package className="h-5 w-5" />
+                        <div className="flex-1">
+                          <p className="font-bold">PAXI Express</p>
+                          <p className="text-sm text-muted-foreground">3-5 business days</p>
+                        </div>
+                        <span className="font-bold">R 110.00</span>
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2 border border-border p-4 rounded-lg">
-                      <RadioGroupItem value="pep" id="pep" />
-                      <Label htmlFor="pep" className="flex items-center gap-3 cursor-pointer flex-1">
+                      <RadioGroupItem value="paxi-standard" id="paxi-standard" />
+                      <Label htmlFor="paxi-standard" className="flex items-center gap-3 cursor-pointer flex-1">
                         <Package className="h-5 w-5" />
                         <div className="flex-1">
-                          <p className="font-bold">PEP (PAXI Delivery)</p>
-                          <p className="text-sm text-muted-foreground">3-6 business days</p>
+                          <p className="font-bold">PAXI Standard</p>
+                          <p className="text-sm text-muted-foreground">5-7 business days</p>
                         </div>
-                        <span className="font-bold">R 45.00</span>
+                        <span className="font-bold">R 60.00</span>
                       </Label>
                     </div>
                   </RadioGroup>
@@ -225,7 +237,11 @@ const Checkout = () => {
                     <p className="text-sm">{formData.address}</p>
                     <p className="text-sm">{formData.city}, {formData.postalCode}</p>
                     <p className="text-sm mt-2 text-muted-foreground">
-                      {shippingMethod === "courier" ? "Courier Guy - Door-to-door" : "PEP (PAXI Delivery)"}
+                      {shippingMethod === "courier" 
+                        ? "Courier Guy - Door-to-door" 
+                        : shippingMethod === "paxi-express"
+                        ? "PAXI Express"
+                        : "PAXI Standard"}
                     </p>
                   </div>
 
