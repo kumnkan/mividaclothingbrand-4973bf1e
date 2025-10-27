@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/contexts/CartContext";
 import { useToast } from "@/hooks/use-toast";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 interface TShirtGalleryProps {
   design: TShirtDesign;
@@ -53,14 +60,24 @@ const TShirtGallery = ({ design }: TShirtGalleryProps) => {
       <div className="grid md:grid-cols-2 gap-8">
         {/* Image Gallery */}
         <div>
-          {/* Main Image */}
-          <div className="aspect-square bg-secondary rounded-lg overflow-hidden mb-4">
-            <img
-              src={currentColor.images[mainImageIndex]}
-              alt={`${design.name} - ${currentColor.name}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {/* Main Image Carousel */}
+          <Carousel className="w-full mb-4">
+            <CarouselContent>
+              {currentColor.images.map((image, idx) => (
+                <CarouselItem key={idx}>
+                  <div className="aspect-square bg-secondary rounded-lg overflow-hidden">
+                    <img
+                      src={image}
+                      alt={`${design.name} - ${currentColor.name} - View ${idx + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
 
           {/* Thumbnail Gallery */}
           <div className="grid grid-cols-4 gap-2">

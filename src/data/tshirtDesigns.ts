@@ -1,5 +1,10 @@
 import mensImage from "@/assets/mens-category.jpg";
 import womensImage from "@/assets/womens-category.jpg";
+import design1WhiteBlue1 from "@/assets/design1-white-blue-1.jpg";
+import design1WhiteBlue2 from "@/assets/design1-white-blue-2.jpg";
+import design1WhiteBlue3 from "@/assets/design1-white-blue-3.jpg";
+import design1WhiteBlue4 from "@/assets/design1-white-blue-4.jpg";
+import design1WhiteBlue5 from "@/assets/design1-white-blue-5.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -35,7 +40,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Blue",
         hexCode: "#1E3A8A",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design1WhiteBlue1, design1WhiteBlue2, design1WhiteBlue3, design1WhiteBlue4, design1WhiteBlue5]
       },
       {
         id: "design-1-black-white",
