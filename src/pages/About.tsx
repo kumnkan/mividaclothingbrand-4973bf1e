@@ -2,6 +2,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import teamPackaging from "@/assets/team-packaging.jpg";
 import teamBoxes from "@/assets/team-boxes.jpg";
 import teamEventPromo from "@/assets/team-event-promo.jpg";
@@ -11,8 +17,28 @@ import teamRadio2 from "@/assets/team-radio-2.jpg";
 import teamMarket from "@/assets/team-market.jpg";
 import teamSponsors from "@/assets/team-sponsors.jpg";
 import teamCustomers from "@/assets/team-customers.jpg";
+import teamNightEvent from "@/assets/team-night-event.jpg";
+import teamProductDisplay from "@/assets/team-product-display.jpg";
+import teamGroupPhoto from "@/assets/team-group-photo.jpg";
+import teamSneakersDisplay from "@/assets/team-sneakers-display.jpg";
 
 const About = () => {
+  const journeyImages = [
+    { src: teamPackaging, alt: "MI VIDA packaging and products" },
+    { src: teamBoxes, alt: "MI VIDA branded boxes" },
+    { src: teamEventPromo, alt: "MI VIDA event promotion" },
+    { src: teamMember1, alt: "MI VIDA team member at event" },
+    { src: teamRadio, alt: "MI VIDA team at radio station" },
+    { src: teamRadio2, alt: "MI VIDA team promoting products" },
+    { src: teamMarket, alt: "MI VIDA at market event" },
+    { src: teamSponsors, alt: "MI VIDA sponsorships" },
+    { src: teamCustomers, alt: "Happy MI VIDA customers" },
+    { src: teamNightEvent, alt: "MI VIDA night event" },
+    { src: teamProductDisplay, alt: "MI VIDA product display" },
+    { src: teamGroupPhoto, alt: "MI VIDA team photo" },
+    { src: teamSneakersDisplay, alt: "MI VIDA sneakers display" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -79,17 +105,32 @@ const About = () => {
           {/* Team Gallery */}
           <div className="mt-16">
             <h2 className="text-3xl font-bold mb-8 text-foreground">Our Journey</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <img src={teamPackaging} alt="MI VIDA packaging and products" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamBoxes} alt="MI VIDA branded boxes" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamEventPromo} alt="MI VIDA event promotion" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamMember1} alt="MI VIDA team member at event" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamRadio} alt="MI VIDA team at radio station" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamRadio2} alt="MI VIDA team promoting products" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamMarket} alt="MI VIDA at market event" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamSponsors} alt="MI VIDA sponsorships" className="w-full h-64 object-cover rounded-lg" />
-              <img src={teamCustomers} alt="Happy MI VIDA customers" className="w-full h-64 object-cover rounded-lg" />
-            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 7000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {journeyImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="w-full h-64 object-cover rounded-lg" 
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
         </div>
       </div>
