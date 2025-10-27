@@ -112,7 +112,7 @@ const About = () => {
               }}
               plugins={[
                 Autoplay({
-                  delay: 7000,
+                  delay: 4000,
                 }),
               ]}
               className="w-full"
