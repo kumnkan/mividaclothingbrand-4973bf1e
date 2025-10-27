@@ -9,6 +9,10 @@ import design1BlackWhite1 from "@/assets/design1-black-white-1.jpg";
 import design1BlackWhite2 from "@/assets/design1-black-white-2.jpg";
 import design1BlackWhite3 from "@/assets/design1-black-white-3.jpg";
 import design1BlackWhite4 from "@/assets/design1-black-white-4.jpg";
+import design1BlackWhite5 from "@/assets/design1-black-white-5.jpg";
+import design1BlackWhite6 from "@/assets/design1-black-white-6.jpg";
+import design1BlackWhite7 from "@/assets/design1-black-white-7.jpg";
+import design1BlackWhite8 from "@/assets/design1-black-white-8.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -52,7 +56,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Black",
         secondaryColor: "White",
         hexCode: "#000000",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design1BlackWhite5, design1BlackWhite6, design1BlackWhite7, design1BlackWhite8]
       },
       {
         id: "design-1-peach-brown",
