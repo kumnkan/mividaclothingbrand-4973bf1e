@@ -52,7 +52,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Black",
         secondaryColor: "White",
         hexCode: "#000000",
-        images: [design1BlackWhite1, design1BlackWhite2, design1BlackWhite3, design1BlackWhite4]
+        images: [mensImage, womensImage, mensImage, womensImage]
       },
       {
         id: "design-1-peach-brown",
@@ -68,7 +68,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Black",
         hexCode: "#FFFFFF",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design1BlackWhite1, design1BlackWhite2, design1BlackWhite3, design1BlackWhite4]
       }
     ]
   },
