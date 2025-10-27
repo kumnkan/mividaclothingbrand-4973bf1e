@@ -84,6 +84,13 @@ const Navigation = () => {
                         T-Shirts
                       </Link>
                       <Link
+                        to="/hoodies"
+                        className="block py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Hoodies
+                      </Link>
+                      <Link
                         to="/socks"
                         className="block py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                         onClick={() => setIsMenuOpen(false)}
