@@ -18,6 +18,8 @@ import design2WhiteBlue2 from "@/assets/design2-white-blue-2.jpg";
 import design2WhiteRed1 from "@/assets/design2-white-red-1.jpg";
 import design2WhiteRed2 from "@/assets/design2-white-red-2.jpg";
 import design2WhiteRed3 from "@/assets/design2-white-red-3.jpg";
+import design3BlackPink1 from "@/assets/design3-black-pink-1.jpg";
+import design3BlackPink2 from "@/assets/design3-black-pink-2.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -116,20 +118,12 @@ export const tshirtDesigns: TShirtDesign[] = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
       {
-        id: "design-3-graphic-black-white",
-        name: "Graphic Black & White",
+        id: "design-3-black-pink",
+        name: "Black & Pink",
         dominantColor: "Black",
-        secondaryColor: "White",
-        hexCode: "#000000",
-        images: [mensImage, womensImage, mensImage, womensImage]
-      },
-      {
-        id: "design-3-graphic-white-pink",
-        name: "Graphic White & Pink",
-        dominantColor: "White",
         secondaryColor: "Pink",
-        hexCode: "#FFC0CB",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        hexCode: "#000000",
+        images: [design3BlackPink1, design3BlackPink2]
       }
     ]
   },
