@@ -122,19 +122,13 @@ const HoodieGallery = ({ design }: HoodieGalleryProps) => {
                   setSelectedColorIndex(index);
                   setMainImageIndex(0);
                 }}
-                className={`px-4 py-2 rounded-lg border-2 transition-all ${
+                className={`relative px-4 py-2 rounded-lg border-2 transition-all ${
                   selectedColorIndex === index
                     ? "border-primary bg-primary/10"
                     : "border-border hover:border-muted-foreground"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <div
-                    className="w-4 h-4 rounded-full border border-border"
-                    style={{ backgroundColor: color.hexCode }}
-                  />
-                  <span className="text-sm font-medium">{color.name}</span>
-                </div>
+                {color.name}
               </button>
             ))}
           </div>
