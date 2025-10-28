@@ -25,6 +25,8 @@ import design5WhiteBlack2 from "@/assets/design5-white-black-2.jpg";
 import design5WhiteBlack3 from "@/assets/design5-white-black-3.jpg";
 import design6WhiteBlack1 from "@/assets/design6-white-black-1.jpg";
 import design6WhiteBlack2 from "@/assets/design6-white-black-2.jpg";
+import design7BlackWhite1 from "@/assets/design7-black-white-1.jpg";
+import design7BlackWhite2 from "@/assets/design7-black-white-2.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -264,7 +266,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Black",
         secondaryColor: "White",
         hexCode: "#000000",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design7BlackWhite1, design7BlackWhite2]
       }
     ]
   },

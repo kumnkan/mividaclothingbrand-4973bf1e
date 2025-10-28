@@ -2,6 +2,8 @@ import mensImage from "@/assets/mens-category.jpg";
 import womensImage from "@/assets/womens-category.jpg";
 import kidsImage from "@/assets/kids-category.jpg";
 import socksImage from "@/assets/socks-category.jpg";
+import design5WhiteBlack1 from "@/assets/design5-white-black-1.jpg";
+import design7BlackWhite1 from "@/assets/design7-black-white-1.jpg";
 
 export interface Product {
   id: string;
@@ -18,6 +20,30 @@ export interface Product {
 
 export const products: Product[] = [
   // New T-Shirt Designs
+  {
+    id: "design-5",
+    name: "Mi Vida Classic Duo",
+    price: 249.99,
+    image: design5WhiteBlack1,
+    category: "T-Shirts",
+    colors: ["#FFFFFF", "#000000"],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    description: "Timeless black and white combination. A wardrobe essential.",
+    type: "tshirts",
+    isNew: true,
+  },
+  {
+    id: "design-7",
+    name: "Mi Vida Noir Collection",
+    price: 249.99,
+    image: design7BlackWhite1,
+    category: "T-Shirts",
+    colors: ["#000000", "#FFFFFF"],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    description: "Sophisticated black design with white accents. Elegance in simplicity.",
+    type: "tshirts",
+    isNew: true,
+  },
   {
     id: "tshirt-new-1",
     name: "Mi Rita Signature Black Tee",
