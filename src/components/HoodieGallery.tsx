@@ -111,10 +111,10 @@ const HoodieGallery = ({ design }: HoodieGalleryProps) => {
 
         {/* Color Selection */}
         <div>
-          <label className="text-sm font-medium mb-3 block">
-            Color: {selectedColor.name}
-          </label>
-          <div className="flex flex-wrap gap-2">
+          <h3 className="font-bold mb-3">
+            Color: <span className="text-primary">{selectedColor.name}</span>
+          </h3>
+          <div className="flex gap-2 flex-wrap">
             {design.colorVariations.map((color, index) => (
               <button
                 key={color.id}
@@ -122,13 +122,20 @@ const HoodieGallery = ({ design }: HoodieGalleryProps) => {
                   setSelectedColorIndex(index);
                   setMainImageIndex(0);
                 }}
-                className={`relative px-4 py-2 rounded-lg border-2 transition-all ${
-                  selectedColorIndex === index
-                    ? "border-primary bg-primary/10"
-                    : "border-border hover:border-muted-foreground"
-                }`}
+                className="group relative"
+                title={color.name}
               >
-                {color.name}
+                <div
+                  className={`w-10 h-10 rounded-full border-2 transition-all ${
+                    selectedColorIndex === index
+                      ? "border-primary scale-110"
+                      : "border-border hover:border-primary/50"
+                  }`}
+                  style={{ backgroundColor: color.hexCode }}
+                />
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-popover text-popover-foreground text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                  {color.name}
+                </div>
               </button>
             ))}
           </div>
