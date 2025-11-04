@@ -27,6 +27,8 @@ import design6WhiteBlack1 from "@/assets/design6-white-black-1.jpg";
 import design6WhiteBlack2 from "@/assets/design6-white-black-2.jpg";
 import design7BlackWhite1 from "@/assets/design7-black-white-1.jpg";
 import design7BlackWhite2 from "@/assets/design7-black-white-2.jpg";
+import design8MilkyBlack1 from "@/assets/design8-milky-black-1.jpg";
+import design8MilkyBlack2 from "@/assets/design8-milky-black-2.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -284,7 +286,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Milky Coffee",
         secondaryColor: "Black",
         hexCode: "#D2B48C",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design8MilkyBlack1, design8MilkyBlack2]
       }
     ]
   }
