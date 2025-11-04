@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import teamPackaging from "@/assets/team-packaging.jpg";
+import teamPackagingBags from "@/assets/team-packaging-bags.jpg";
 import teamBoxes from "@/assets/team-boxes.jpg";
 import teamEventPromo from "@/assets/team-event-promo.jpg";
 import teamMember1 from "@/assets/team-member-1.jpg";
@@ -25,6 +26,7 @@ import teamSneakersDisplay from "@/assets/team-sneakers-display.jpg";
 const About = () => {
   const journeyImages = [
     { src: teamPackaging, alt: "MI VIDA packaging and products" },
+    { src: teamPackagingBags, alt: "MI VIDA premium packaging bags" },
     { src: teamBoxes, alt: "MI VIDA branded boxes" },
     { src: teamEventPromo, alt: "MI VIDA event promotion" },
     { src: teamMember1, alt: "MI VIDA team member at event" },
