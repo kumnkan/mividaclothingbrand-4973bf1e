@@ -28,7 +28,7 @@ const Index = () => {
               Check out our latest t-shirt designs. Hot drops you don't want to miss.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
             {newArrivals.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -36,44 +36,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Classic Collection Section */}
+      {/* Socks Section */}
       <section className="py-16 md:py-24">
-        <div className="container-custom">
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              The Originals
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Our classic designs that started it all. Timeless style, premium quality.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {classicCollection.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Socks Section Teaser */}
-      <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom">
           <div className="mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
               Step Up Your Style
             </h2>
             <p className="text-lg text-muted-foreground">
-              Premium socks in all sizes. Comfort meets style.
+              Premium black and white socks. Comfort meets style in all sizes.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8">
-            {sockProducts.slice(0, 4).map((product) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto mb-8">
+            {sockProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
           <div className="text-center">
             <Button asChild size="lg">
-              <Link to="/socks">Shop All Socks</Link>
+              <Link to="/tshirts">Explore All Designs</Link>
             </Button>
           </div>
         </div>

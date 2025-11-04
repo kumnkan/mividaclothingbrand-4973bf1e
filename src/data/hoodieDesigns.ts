@@ -36,6 +36,14 @@ export const hoodieDesigns: HoodieDesign[] = [
         secondaryColor: "White",
         hexCode: "#000000",
         images: [hoodieBlackWhite1, hoodieBlackWhite2]
+      },
+      {
+        id: "hoodie-1-white-black",
+        name: "White & Black",
+        dominantColor: "White",
+        secondaryColor: "Black",
+        hexCode: "#FFFFFF",
+        images: [hoodieBlackWhite2, hoodieBlackWhite1]
       }
     ]
   }
