@@ -37,6 +37,15 @@ import design4BlackWhite1 from "@/assets/design4-black-white-1.jpg";
 import design4BlackWhite2 from "@/assets/design4-black-white-2.jpg";
 import design4BlackWhite3 from "@/assets/design4-black-white-3.jpg";
 import design4BlackWhite4 from "@/assets/design4-black-white-4.jpg";
+import design4WhiteBlack1 from "@/assets/design4-white-black-1.jpg";
+import design4WhiteBlack2 from "@/assets/design4-white-black-2.jpg";
+import design4WhiteBlack3 from "@/assets/design4-white-black-3.jpg";
+import design4BrownMilky1 from "@/assets/design4-brown-milky-1.jpg";
+import design4BrownMilky2 from "@/assets/design4-brown-milky-2.jpg";
+import design4BrownMilky3 from "@/assets/design4-brown-milky-3.jpg";
+import design4MilkyBlack1 from "@/assets/design4-milky-black-1.jpg";
+import design4MilkyBlack2 from "@/assets/design4-milky-black-2.jpg";
+import design4MilkyBlack3 from "@/assets/design4-milky-black-3.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -190,7 +199,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Black",
         hexCode: "#FFFFFF",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design4WhiteBlack1, design4WhiteBlack2, design4WhiteBlack3]
       },
       {
         id: "design-4-white-orange",
@@ -222,7 +231,15 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Brown",
         secondaryColor: "Milky Coffee",
         hexCode: "#8B4513",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design4BrownMilky1, design4BrownMilky2, design4BrownMilky3]
+      },
+      {
+        id: "design-4-milky-black",
+        name: "Milky Coffee & Black",
+        dominantColor: "Milky Coffee",
+        secondaryColor: "Black",
+        hexCode: "#D2B48C",
+        images: [design4MilkyBlack1, design4MilkyBlack2, design4MilkyBlack3]
       }
     ]
   },

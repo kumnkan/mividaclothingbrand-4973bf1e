@@ -22,14 +22,6 @@ import teamNightEvent from "@/assets/team-night-event.jpg";
 import teamProductDisplay from "@/assets/team-product-display.jpg";
 import teamGroupPhoto from "@/assets/team-group-photo.jpg";
 import teamSneakersDisplay from "@/assets/team-sneakers-display.jpg";
-import teamJourney1 from "@/assets/team-journey-1.jpg";
-import teamJourney2 from "@/assets/team-journey-2.jpg";
-import teamJourney3 from "@/assets/team-journey-3.jpg";
-import teamJourney4 from "@/assets/team-journey-4.jpg";
-import teamJourney5 from "@/assets/team-journey-5.jpg";
-import teamJourney6 from "@/assets/team-journey-6.jpg";
-import teamJourney7 from "@/assets/team-journey-7.jpg";
-import teamJourney8 from "@/assets/team-journey-8.jpg";
 
 const About = () => {
   const journeyImages = [
@@ -47,14 +39,6 @@ const About = () => {
     { src: teamProductDisplay, alt: "MI VIDA product display" },
     { src: teamGroupPhoto, alt: "MI VIDA team photo" },
     { src: teamSneakersDisplay, alt: "MI VIDA sneakers display" },
-    { src: teamJourney1, alt: "MI VIDA team wearing signature tees" },
-    { src: teamJourney2, alt: "MI VIDA youth collection" },
-    { src: teamJourney3, alt: "MI VIDA kids wearing brand tees" },
-    { src: teamJourney4, alt: "MI VIDA classic white design" },
-    { src: teamJourney5, alt: "MI VIDA street style photoshoot" },
-    { src: teamJourney6, alt: "MI VIDA urban fashion" },
-    { src: teamJourney7, alt: "MI VIDA lifestyle photography" },
-    { src: teamJourney8, alt: "MI VIDA young brand ambassadors" },
   ];
 
   return (
