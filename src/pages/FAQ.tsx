@@ -11,15 +11,27 @@ const FAQ = () => {
   const faqs = [
     {
       question: "How long does delivery take?",
-      answer: "We offer nationwide delivery within 3-5 business days. Once your order is dispatched, you'll receive a tracking number via email to monitor your parcel's progress.",
+      answer: "We offer nationwide delivery within 3-5 business days across South Africa. Once your order is dispatched, you'll receive a tracking number via email to monitor your parcel's progress.",
     },
     {
       question: "What payment methods do you accept?",
       answer: "We accept all major credit and debit cards through our secure payment gateway. Payments are processed instantly and your order is confirmed immediately.",
     },
     {
-      question: "What is your return policy?",
-      answer: "We offer easy returns within 30 days of purchase. Items must be unworn, unwashed, and in original condition with tags attached. Contact our support team to initiate a return.",
+      question: "Can I cancel my order?",
+      answer: "You have 24 hours from the time of purchase to cancel your order. Please contact our support team immediately within this timeframe to process your cancellation. After 24 hours, your order will be prepared for dispatch and cannot be cancelled.",
+    },
+    {
+      question: "What is your warranty policy?",
+      answer: "All MI VIDA products come with a 7-day warranty from the date of delivery. If you experience any manufacturing defects or quality issues within this period, please contact our support team with photos of the defect, and we will provide a replacement or refund.",
+    },
+    {
+      question: "How do I care for my MI VIDA products?",
+      answer: "Hand wash only in cold water with mild detergent. Do not bleach or dry clean. Air dry flat away from direct sunlight. Iron on low heat if needed. Following these care instructions will help maintain the quality and longevity of your garment.",
+    },
+    {
+      question: "Are your products made in South Africa?",
+      answer: "Yes, MI VIDA is a proudly South African brand. All our products are designed and manufactured in South Africa, supporting local industry and ensuring quality craftsmanship.",
     },
     {
       question: "How do I track my order?",
@@ -27,19 +39,7 @@ const FAQ = () => {
     },
     {
       question: "What sizes do you offer?",
-      answer: "We offer a comprehensive range of sizes: Adults (XS to XXXL), Kids (4Y to 14Y), and Socks (SA shoe sizes 3-14). Check our size guide on each product page for detailed measurements.",
-    },
-    {
-      question: "Are your products made in South Africa?",
-      answer: "Mi Rita is a proudly South African brand. We carefully source our materials and work with local partners to bring you quality products.",
-    },
-    {
-      question: "How do I care for my Mi Rita products?",
-      answer: "Machine wash cold with similar colors. Tumble dry low or hang to dry. Iron on low heat if needed. Avoid bleach to maintain fabric quality and color.",
-    },
-    {
-      question: "Can I change or cancel my order?",
-      answer: "Orders can be modified or cancelled within 2 hours of placement. After that, your order will be processed for dispatch. Contact us immediately if you need to make changes.",
+      answer: "We offer a comprehensive range of sizes: T-Shirts and Hoodies (XS to XXXL), and Socks (SA shoe sizes 1-3, 4-6, 7-9, 10-12). Check our size guide on each product page for detailed measurements.",
     },
   ];
 
@@ -53,7 +53,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-muted-foreground mb-12">
-            Find answers to common questions about Mi Rita products, orders, and policies.
+            Find answers to common questions about MI VIDA products, orders, and policies.
           </p>
 
           <Accordion type="single" collapsible className="space-y-4">
@@ -75,7 +75,7 @@ const FAQ = () => {
               Can't find the answer you're looking for? Our support team is here to help.
             </p>
             <a
-              href="mailto:support@mirita.co.za"
+              href="mailto:support@mivida.co.za"
               className="text-primary font-medium hover:underline"
             >
               Contact Support →
