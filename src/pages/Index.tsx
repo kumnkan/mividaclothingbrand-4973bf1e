@@ -2,15 +2,36 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
-import socksImage from "@/assets/socks-category.jpg";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { getNewArrivals, getClassicCollection, getProductsByCategory } from "@/data/products";
+import { getNewArrivals, getProductsByCategory } from "@/data/products";
+import { tshirtDesigns } from "@/data/tshirtDesigns";
+import { hoodieDesigns } from "@/data/hoodieDesigns";
 
 const Index = () => {
   const newArrivals = getNewArrivals();
-  const classicCollection = getClassicCollection();
   const sockProducts = getProductsByCategory("socks");
+  
+  // Convert tshirt designs to product format for display
+  const tshirtProducts = tshirtDesigns.map(design => ({
+    id: design.id,
+    name: design.name,
+    price: design.price,
+    image: design.colorVariations[0].images[0],
+    category: "T-Shirts",
+    colors: design.colorVariations.map(v => v.hexCode),
+    isNew: design.id === "design-5" || design.id === "design-7"
+  }));
+  
+  // Convert hoodie designs to product format for display
+  const hoodieProducts = hoodieDesigns.map(design => ({
+    id: design.id,
+    name: design.name,
+    price: design.price,
+    image: design.colorVariations[0].images[0],
+    category: "Hoodies",
+    colors: design.colorVariations.map(v => v.hexCode)
+  }));
 
   return (
     <div className="min-h-screen bg-background">
@@ -36,6 +57,54 @@ const Index = () => {
         </div>
       </section>
 
+      {/* T-Shirts Collection */}
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+              T-Shirt Collection
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Explore all our t-shirt designs. Premium quality, bold styles.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {tshirtProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild size="lg">
+              <Link to="/tshirts">View All T-Shirts</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Hoodies Collection */}
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container-custom">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+              Premium Hoodies
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Ultra-soft heavyweight hoodies with signature Mi Vida branding.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
+            {hoodieProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild size="lg">
+              <Link to="/hoodies">Shop Hoodies</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Socks Section */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
@@ -47,21 +116,16 @@ const Index = () => {
               Premium black and white socks. Comfort meets style in all sizes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
             {sockProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
-          </div>
-          <div className="text-center">
-            <Button asChild size="lg">
-              <Link to="/tshirts">Explore All Designs</Link>
-            </Button>
           </div>
         </div>
       </section>
 
       {/* Brand Story Section */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-16 md:py-24">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
