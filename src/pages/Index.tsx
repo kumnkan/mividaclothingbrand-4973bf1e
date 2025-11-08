@@ -12,8 +12,12 @@ const Index = () => {
   const newArrivals = getNewArrivals();
   const sockProducts = getProductsByCategory("socks");
   
-  // Convert tshirt designs to product format for display
-  const tshirtProducts = tshirtDesigns.map(design => ({
+  // Convert tshirt designs to product format for display - showing only designs 1, 4, and 2
+  const featuredTshirtDesigns = tshirtDesigns.filter(design => 
+    design.id === "design-1" || design.id === "design-4" || design.id === "design-2"
+  );
+  
+  const tshirtProducts = featuredTshirtDesigns.map(design => ({
     id: design.id,
     name: design.name,
     price: design.price,
@@ -68,7 +72,7 @@ const Index = () => {
               Explore all our t-shirt designs. Premium quality, bold styles.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
             {tshirtProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
