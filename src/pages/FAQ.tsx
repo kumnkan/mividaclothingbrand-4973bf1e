@@ -11,35 +11,35 @@ const FAQ = () => {
   const faqs = [
     {
       question: "How long does delivery take?",
-      answer: "We offer nationwide delivery within 3-5 business days across South Africa. Once your order is dispatched, you'll receive a tracking number via email to monitor your parcel's progress.",
+      answer: "• Nationwide delivery within 3-5 business days across South Africa\n• Tracking number sent via email once order is dispatched\n• Real-time delivery updates available on our Track Order page",
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit and debit cards through our secure payment gateway. Payments are processed instantly and your order is confirmed immediately.",
+      answer: "• All major credit and debit cards accepted\n• Secure payment gateway for safe transactions\n• Instant payment processing and order confirmation",
     },
     {
       question: "Can I cancel my order?",
-      answer: "You have 24 hours from the time of purchase to cancel your order. Please contact our support team immediately within this timeframe to process your cancellation. After 24 hours, your order will be prepared for dispatch and cannot be cancelled.",
+      answer: "• 24-hour cancellation window from time of purchase\n• Contact support immediately within this timeframe\n• Orders cannot be cancelled after 24 hours as they enter dispatch preparation",
     },
     {
       question: "What is your warranty policy?",
-      answer: "All MI VIDA products come with a 7-day warranty from the date of delivery. If you experience any manufacturing defects or quality issues within this period, please contact our support team with photos of the defect, and we will provide a replacement or refund.",
+      answer: "• 7-day warranty from date of delivery\n• Covers manufacturing defects and quality issues\n• Contact support with photos of any defects for replacement or refund",
     },
     {
       question: "How do I care for my MI VIDA products?",
-      answer: "Hand wash only in cold water with mild detergent. Do not bleach or dry clean. Air dry flat away from direct sunlight. Iron on low heat if needed. Following these care instructions will help maintain the quality and longevity of your garment.",
+      answer: "• Hand wash only in cold water with mild detergent\n• Do not bleach or dry clean\n• Air dry flat away from direct sunlight\n• Iron on low heat if needed",
     },
     {
       question: "Are your products made in South Africa?",
-      answer: "Yes, MI VIDA is a proudly South African brand. All our products are designed and manufactured in South Africa, supporting local industry and ensuring quality craftsmanship.",
+      answer: "• Proudly South African brand\n• All products designed and manufactured in South Africa\n• Supports local industry and ensures quality craftsmanship",
     },
     {
       question: "How do I track my order?",
-      answer: "Once your order is dispatched, you'll receive a tracking number via email. You can enter this number on our Track Order page to see real-time updates on your delivery status.",
+      answer: "• Tracking number sent via email after dispatch\n• Enter tracking number on our Track Order page\n• Monitor real-time delivery status and updates",
     },
     {
       question: "What sizes do you offer?",
-      answer: "We offer a comprehensive range of sizes: T-Shirts and Hoodies (XS to XXXL), and Socks (SA shoe sizes 1-3, 4-6, 7-9, 10-12). Check our size guide on each product page for detailed measurements.",
+      answer: "• T-Shirts & Hoodies: XS, S, M, L, XL, XXL, XXXL\n• Socks: SA shoe sizes 1-3, 4-6, 7-9, 10-12\n• Size guide available on each product page",
     },
   ];
 
@@ -62,7 +62,7 @@ const FAQ = () => {
                 <AccordionTrigger className="text-left font-bold hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground whitespace-pre-line">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
