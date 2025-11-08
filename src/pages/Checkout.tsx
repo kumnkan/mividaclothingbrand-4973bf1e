@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useCart } from "@/contexts/CartContext";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -16,6 +17,8 @@ const Checkout = () => {
   const { toast } = useToast();
   const [step, setStep] = useState(1);
   const [shippingMethod, setShippingMethod] = useState<"paxi-standard" | "paxi-express" | "courier">("courier");
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [acceptedMarketing, setAcceptedMarketing] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,6 +45,15 @@ const Checkout = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!acceptedTerms) {
+      toast({
+        title: "Terms Required",
+        description: "Please accept the Terms and Conditions to proceed with your order.",
+        variant: "destructive",
+      });
+      return;
+    }
     
     // Simulate order processing
     toast({
@@ -259,6 +271,49 @@ const Checkout = () => {
                       <span>R {totalAmount.toFixed(2)}</span>
                     </div>
                   </div>
+                </div>
+
+                <div className="border border-border rounded-lg p-6 space-y-4 bg-muted">
+                  <h3 className="font-bold text-lg mb-4">Terms and Conditions</h3>
+                  
+                  <div className="flex items-start gap-3">
+                    <Checkbox 
+                      id="terms" 
+                      checked={acceptedTerms}
+                      onCheckedChange={(checked) => setAcceptedTerms(checked as boolean)}
+                      required
+                    />
+                    <div className="flex-1">
+                      <Label htmlFor="terms" className="cursor-pointer text-sm leading-relaxed">
+                        I have read and agree to the{" "}
+                        <a 
+                          href="/terms" 
+                          target="_blank" 
+                          className="text-primary hover:underline font-medium"
+                        >
+                          Terms and Conditions
+                        </a>
+                        , including MI VIDA's warranty policy, cancellation terms, and compliance with South African consumer protection laws.
+                      </Label>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Checkbox 
+                      id="marketing" 
+                      checked={acceptedMarketing}
+                      onCheckedChange={(checked) => setAcceptedMarketing(checked as boolean)}
+                    />
+                    <div className="flex-1">
+                      <Label htmlFor="marketing" className="cursor-pointer text-sm leading-relaxed">
+                        I consent to receive promotional emails and SMS messages about new products, sales, and special offers from MI VIDA. I understand I can opt-out at any time. <span className="text-muted-foreground">(Optional)</span>
+                      </Label>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-muted-foreground mt-4">
+                    Your personal information will be processed in accordance with the Protection of Personal Information Act (POPIA). By placing an order, you acknowledge your rights under South African consumer protection laws.
+                  </p>
                 </div>
 
                 <div className="flex gap-4">
