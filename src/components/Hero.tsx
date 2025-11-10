@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="container-custom w-full">
           <div className="max-w-2xl text-white animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tighter">
-              MI VIDA – Wear Your Style
+              MI VIDA
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90">
               Fashion that describes you. Premium quality t-shirts and socks. Proudly South African.

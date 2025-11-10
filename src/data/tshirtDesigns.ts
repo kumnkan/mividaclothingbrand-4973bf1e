@@ -70,7 +70,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-1",
     designNumber: 1,
-    name: "Mi Vida Signature Collection",
+    name: "Mzansi Wave",
     price: 249.99,
     description: "Our signature design with multiple stunning color combinations. Premium cotton blend for ultimate comfort.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -112,7 +112,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-2",
     designNumber: 2,
-    name: "Mi Vida Fresh Styles",
+    name: "Jozi Fresh",
     price: 249.99,
     description: "Fresh and vibrant designs perfect for any occasion. Soft, breathable fabric.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -138,7 +138,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-3",
     designNumber: 3,
-    name: "Mi Vida Graphic Series",
+    name: "Kasi Vibes",
     price: 249.99,
     description: "Bold graphic designs that make a statement. High-quality print that lasts.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -156,7 +156,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-4",
     designNumber: 4,
-    name: "Mi Vida Ultimate Collection",
+    name: "Lekker Luxe",
     price: 249.99,
     description: "Our most versatile design with an extensive color palette. Find your perfect match.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -246,7 +246,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-5",
     designNumber: 5,
-    name: "Mi Vida Classic Duo",
+    name: "Ubuntu Pure",
     price: 249.99,
     description: "Timeless black and white combination. A wardrobe essential.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -264,7 +264,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-6",
     designNumber: 6,
-    name: "Mi Vida Contrast Edition",
+    name: "Sharp Edition",
     price: 249.99,
     description: "Bold contrast design for those who stand out. Premium quality guaranteed.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -282,7 +282,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-7",
     designNumber: 7,
-    name: "Mi Vida Noir Collection",
+    name: "Eish Noir",
     price: 249.99,
     description: "Sophisticated black design with white accents. Elegance in simplicity.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -300,7 +300,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-8",
     designNumber: 8,
-    name: "Mi Vida Artistic Line",
+    name: "Shweshwe Soul",
     price: 249.99,
     description: "Unique graphic design with artistic flair. Express your style.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
