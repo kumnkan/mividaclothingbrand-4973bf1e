@@ -10,6 +10,8 @@ import TShirts from "./pages/TShirts";
 import TShirtDetail from "./pages/TShirtDetail";
 import Hoodies from "./pages/Hoodies";
 import HoodieDetail from "./pages/HoodieDetail";
+import Socks from "./pages/Socks";
+import SocksDetail from "./pages/SocksDetail";
 import ProductDetail from "./pages/ProductDetail";
 import TrackOrder from "./pages/TrackOrder";
 import Checkout from "./pages/Checkout";
@@ -32,7 +34,8 @@ const App = () => (
           <Route path="/tshirt/:id" element={<TShirtDetail />} />
           <Route path="/hoodies" element={<Hoodies />} />
           <Route path="/hoodie/:id" element={<HoodieDetail />} />
-          <Route path="/socks" element={<CategoryPage />} />
+          <Route path="/socks" element={<Socks />} />
+          <Route path="/socks/:id" element={<SocksDetail />} />
           <Route path="/new-arrivals" element={<CategoryPage />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/checkout" element={<Checkout />} />
