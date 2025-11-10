@@ -21,7 +21,7 @@ const Hero = () => {
               MI VIDA – Wear Your Style
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90">
-              Premium quality t-shirts and socks. Made for everyday life. Proudly South African.
+              Fashion that describes you. Premium quality t-shirts and socks. Proudly South African.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-12">
               <Link to="/tshirts">Shop Now</Link>
