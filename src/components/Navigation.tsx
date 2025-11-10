@@ -65,6 +65,14 @@ const Navigation = () => {
               </div>
 
               <nav className="space-y-1">
+                <Link
+                  to="/"
+                  className="block py-3 text-base font-medium hover:text-muted-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Home
+                </Link>
+
                 {/* Shop Dropdown */}
                 <div>
                   <button
