@@ -22,7 +22,7 @@ export const products: Product[] = [
   // New T-Shirt Designs (Only 2 New Arrivals)
   {
     id: "design-5",
-    name: "Ubuntu Pure",
+    name: "MI VIDA Wave Rider",
     price: 249.99,
     image: design5WhiteBlack1,
     category: "T-Shirts",
@@ -34,7 +34,7 @@ export const products: Product[] = [
   },
   {
     id: "design-7",
-    name: "Eish Noir",
+    name: "MI VIDA Beach Side",
     price: 249.99,
     image: design7BlackWhite1,
     category: "T-Shirts",
@@ -48,7 +48,7 @@ export const products: Product[] = [
   // Socks Collection (Only 1 Design - Black & White)
   {
     id: "socks-black-white",
-    name: "Mzansi Steps",
+    name: "MI VIDA Classic Socks",
     price: 89.99,
     image: socksImage,
     category: "Socks",

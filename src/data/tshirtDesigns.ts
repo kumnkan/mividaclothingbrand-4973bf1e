@@ -70,7 +70,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-1",
     designNumber: 1,
-    name: "Mzansi Wave",
+    name: "MI VIDA Coast Line",
     price: 249.99,
     description: "Our signature design with multiple stunning color combinations. Premium cotton blend for ultimate comfort.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -112,7 +112,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-2",
     designNumber: 2,
-    name: "Jozi Fresh",
+    name: "MI VIDA Sunrise",
     price: 249.99,
     description: "Fresh and vibrant designs perfect for any occasion. Soft, breathable fabric.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -138,7 +138,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-3",
     designNumber: 3,
-    name: "Kasi Vibes",
+    name: "MI VIDA Bay Breeze",
     price: 249.99,
     description: "Bold graphic designs that make a statement. High-quality print that lasts.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -156,7 +156,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-4",
     designNumber: 4,
-    name: "Lekker Luxe",
+    name: "MI VIDA Horizon",
     price: 249.99,
     description: "Our most versatile design with an extensive color palette. Find your perfect match.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -246,7 +246,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-5",
     designNumber: 5,
-    name: "Ubuntu Pure",
+    name: "MI VIDA Wave Rider",
     price: 249.99,
     description: "Timeless black and white combination. A wardrobe essential.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -264,7 +264,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-6",
     designNumber: 6,
-    name: "Sharp Edition",
+    name: "MI VIDA City Soul",
     price: 249.99,
     description: "Bold contrast design for those who stand out. Premium quality guaranteed.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -282,7 +282,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-7",
     designNumber: 7,
-    name: "Eish Noir",
+    name: "MI VIDA Beach Side",
     price: 249.99,
     description: "Sophisticated black design with white accents. Elegance in simplicity.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -300,7 +300,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-8",
     designNumber: 8,
-    name: "Shweshwe Soul",
+    name: "MI VIDA Ocean Drive",
     price: 249.99,
     description: "Unique graphic design with artistic flair. Express your style.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
