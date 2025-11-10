@@ -22,6 +22,10 @@ import teamNightEvent from "@/assets/team-night-event.jpg";
 import teamProductDisplay from "@/assets/team-product-display.jpg";
 import teamGroupPhoto from "@/assets/team-group-photo.jpg";
 import teamSneakersDisplay from "@/assets/team-sneakers-display.jpg";
+import teamCertificate from "@/assets/team-certificate.jpg";
+import teamPackagedProducts from "@/assets/team-packaged-products.jpg";
+import teamEventCustomers from "@/assets/team-event-customers.jpg";
+import teamMembersBags from "@/assets/team-members-bags.jpg";
 
 const About = () => {
   const journeyImages = [
@@ -39,6 +43,10 @@ const About = () => {
     { src: teamProductDisplay, alt: "MI VIDA product display" },
     { src: teamGroupPhoto, alt: "MI VIDA team photo" },
     { src: teamSneakersDisplay, alt: "MI VIDA sneakers display" },
+    { src: teamCertificate, alt: "MI VIDA certificate of appreciation for Miss Summer East London" },
+    { src: teamPackagedProducts, alt: "MI VIDA packaged products" },
+    { src: teamEventCustomers, alt: "MI VIDA team with happy customers" },
+    { src: teamMembersBags, alt: "MI VIDA team members with branded bags" },
   ];
 
   return (
