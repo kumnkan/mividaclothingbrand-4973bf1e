@@ -50,6 +50,10 @@ import design4WhiteBlue1 from "@/assets/design4-white-blue-1.jpg";
 import design4WhiteBlue2 from "@/assets/design4-white-blue-2.jpg";
 import design4WhiteBlue3 from "@/assets/design4-white-blue-3.jpg";
 import design4WhiteBlue4 from "@/assets/design4-white-blue-4.jpg";
+import design9GreyBlack1 from "@/assets/design9-grey-black-1.jpg";
+import design9WhiteGrey1 from "@/assets/design9-white-grey-1.jpg";
+import design9WhiteGrey2 from "@/assets/design9-white-grey-2.jpg";
+import design9WhiteGrey3 from "@/assets/design9-white-grey-3.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -316,6 +320,32 @@ export const tshirtDesigns: TShirtDesign[] = [
         secondaryColor: "Black",
         hexCode: "#D2B48C",
         images: [design8MilkyBlack1, design8MilkyBlack2]
+      }
+    ]
+  },
+  {
+    id: "design-9",
+    designNumber: 9,
+    name: "MI VIDA Street Style",
+    price: 249.99,
+    description: "Modern design with bold graphics. Perfect for everyday wear.",
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    colorVariations: [
+      {
+        id: "design-9-grey-black",
+        name: "Grey & Black",
+        dominantColor: "Grey",
+        secondaryColor: "Black",
+        hexCode: "#808080",
+        images: [design9GreyBlack1]
+      },
+      {
+        id: "design-9-white-grey",
+        name: "White & Grey",
+        dominantColor: "White",
+        secondaryColor: "Grey",
+        hexCode: "#FFFFFF",
+        images: [design9WhiteGrey1, design9WhiteGrey2, design9WhiteGrey3]
       }
     ]
   }
