@@ -55,16 +55,26 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
 
   return (
     <div className="container-custom py-8">
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12">
         {/* Left Column - Images */}
         <div className="space-y-4">
-          {/* Main Image Carousel */}
-          <div className="relative overflow-hidden bg-secondary aspect-square">
-            <img
-              src={selectedColor.images[mainImageIndex]}
-              alt={`${design.name} - ${selectedColor.name}`}
-              className="w-full h-full object-contain"
-            />
+          {/* Main Carousel */}
+          <div className="relative bg-secondary rounded-lg overflow-hidden aspect-square">
+            <Carousel className="w-full h-full">
+              <CarouselContent>
+                {selectedColor.images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <img
+                      src={image}
+                      alt={`${design.name} - ${selectedColor.name} - View ${index + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
 
           {/* Thumbnail Images */}
@@ -73,10 +83,10 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
               <button
                 key={idx}
                 onClick={() => setMainImageIndex(idx)}
-                className={`relative overflow-hidden bg-secondary aspect-square border-2 transition-colors ${
+                className={`relative bg-secondary rounded-lg overflow-hidden aspect-square border-2 transition-colors ${
                   mainImageIndex === idx
                     ? "border-primary"
-                    : "border-transparent hover:border-border"
+                    : "border-transparent hover:border-muted-foreground/50"
                 }`}
               >
                 <img
@@ -93,18 +103,20 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
         <div className="space-y-6">
           <div>
             <Badge className="mb-2">Socks Collection</Badge>
-            <h1 className="text-4xl font-bold mb-2">{design.name}</h1>
-            <p className="text-3xl font-bold">R{design.price.toFixed(2)}</p>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">{design.name}</h1>
+            <p className="text-2xl font-bold text-primary">
+              R{design.price.toFixed(2)}
+            </p>
           </div>
 
-          <p className="text-lg text-muted-foreground">{design.description}</p>
+          <p className="text-muted-foreground">{design.description}</p>
 
           {/* Color Selection */}
           <div>
-            <h3 className="font-semibold mb-3">
-              Color: {selectedColor.name}
+            <h3 className="font-bold mb-3">
+              Color: <span className="text-primary">{selectedColor.name}</span>
             </h3>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {design.colorVariations.map((color, idx) => (
                 <button
                   key={color.id}
@@ -112,53 +124,45 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
                     setSelectedColorIndex(idx);
                     setMainImageIndex(0);
                   }}
-                  className={`w-12 h-12 rounded-full border-2 transition-all ${
-                    selectedColorIndex === idx
-                      ? "border-primary scale-110"
-                      : "border-border hover:scale-105"
-                  }`}
-                  style={{ backgroundColor: color.hexCode }}
+                  className="group relative"
                   title={color.name}
-                />
+                >
+                  <div
+                    className={`w-10 h-10 rounded-full border-2 transition-all ${
+                      selectedColorIndex === idx
+                        ? "border-primary scale-110"
+                        : "border-border hover:border-primary/50"
+                    }`}
+                    style={{ backgroundColor: color.hexCode }}
+                  />
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-popover text-popover-foreground text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                    {color.name}
+                  </div>
+                </button>
               ))}
             </div>
           </div>
 
           {/* Size Selection */}
           <div>
-            <h3 className="font-semibold mb-3">Size (SA Shoe Size)</h3>
-            <div className="grid grid-cols-4 gap-2">
+            <label className="text-sm font-medium mb-3 block">
+              Size (SA Shoe Size): {selectedSize || "Select a size"}
+            </label>
+            <div className="flex gap-2 flex-wrap">
               {design.sizes.map((size) => (
-                <button
+                <Button
                   key={size}
+                  variant={selectedSize === size ? "default" : "outline"}
                   onClick={() => setSelectedSize(size)}
-                  className={`py-3 px-4 border-2 font-semibold transition-colors ${
-                    selectedSize === size
-                      ? "border-primary bg-primary text-primary-foreground"
-                      : "border-border hover:border-primary"
-                  }`}
+                  className="min-w-[60px]"
                 >
                   {size}
-                </button>
+                </Button>
               ))}
             </div>
           </div>
 
-          {/* Features */}
-          {design.features && design.features.length > 0 && (
-            <div className="bg-secondary p-6">
-              <h3 className="font-semibold mb-3">Features</h3>
-              <ul className="space-y-2">
-                {design.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="font-bold">✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
+          {/* Add to Cart Button */}
           <Button
             size="lg"
             className="w-full"
@@ -166,6 +170,21 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
           >
             Add to Cart
           </Button>
+
+          {/* Features */}
+          {design.features && design.features.length > 0 && (
+            <div className="border-t border-border pt-6">
+              <h3 className="font-medium mb-3">Product Features</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {design.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="font-bold text-foreground">✓</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>
