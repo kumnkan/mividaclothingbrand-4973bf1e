@@ -46,6 +46,10 @@ import design4BrownMilky3 from "@/assets/design4-brown-milky-3.jpg";
 import design4MilkyBlack1 from "@/assets/design4-milky-black-1.jpg";
 import design4MilkyBlack2 from "@/assets/design4-milky-black-2.jpg";
 import design4MilkyBlack3 from "@/assets/design4-milky-black-3.jpg";
+import design4WhiteBlue1 from "@/assets/design4-white-blue-1.jpg";
+import design4WhiteBlue2 from "@/assets/design4-white-blue-2.jpg";
+import design4WhiteBlue3 from "@/assets/design4-white-blue-3.jpg";
+import design4WhiteBlue4 from "@/assets/design4-white-blue-4.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -210,12 +214,12 @@ export const tshirtDesigns: TShirtDesign[] = [
         images: [design4WhiteOrange1, design4WhiteOrange2, design4WhiteOrange3]
       },
       {
-        id: "design-4-skyblue-white",
-        name: "Sky Blue & White",
-        dominantColor: "Sky Blue",
-        secondaryColor: "White",
+        id: "design-4-white-skyblue",
+        name: "White & Sky Blue",
+        dominantColor: "White",
+        secondaryColor: "Sky Blue",
         hexCode: "#87CEEB",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design4WhiteBlue1, design4WhiteBlue2, design4WhiteBlue3, design4WhiteBlue4]
       },
       {
         id: "design-4-milky-black",
