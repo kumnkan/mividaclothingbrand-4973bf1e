@@ -63,7 +63,7 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
             <img
               src={selectedColor.images[mainImageIndex]}
               alt={`${design.name} - ${selectedColor.name}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
 
@@ -82,7 +82,7 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
                 <img
                   src={image}
                   alt={`View ${idx + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </button>
             ))}

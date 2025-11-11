@@ -40,7 +40,6 @@ const About = () => {
     { src: teamSponsors, alt: "MI VIDA sponsorships" },
     { src: teamCustomers, alt: "Happy MI VIDA customers" },
     { src: teamNightEvent, alt: "MI VIDA night event" },
-    { src: teamProductDisplay, alt: "MI VIDA product display" },
     { src: teamGroupPhoto, alt: "MI VIDA team photo" },
     { src: teamSneakersDisplay, alt: "MI VIDA sneakers display" },
     { src: teamCertificate, alt: "MI VIDA certificate of appreciation for Miss Summer East London" },
