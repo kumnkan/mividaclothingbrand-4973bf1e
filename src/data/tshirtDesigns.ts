@@ -60,6 +60,7 @@ import design9GreyLive from "@/assets/design9-grey-live.jpg";
 import design9WhiteRedCarpet2 from "@/assets/design9-white-red-carpet-2.jpg";
 import design9WhiteBackCar from "@/assets/design9-white-back-car.jpg";
 import design9WhiteBackCar2 from "@/assets/design9-white-back-car-2.jpg";
+import teamGroupBanner from "@/assets/team-group-banner.jpg";
 import design10WhiteBlue1 from "@/assets/design10-white-blue-1.jpg";
 import design10WhiteBlue2 from "@/assets/design10-white-blue-2.jpg";
 import design10WhiteBlue3 from "@/assets/design10-white-blue-3.jpg";
@@ -362,7 +363,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Grey",
         hexCode: "#FFFFFF",
-        images: [design9WhiteBackCar, design9WhiteBackCar2, design9WhiteGrey1, design9WhiteGrey2, design9WhiteGrey3]
+        images: [design9WhiteRedCarpet2, design9WhiteBackCar, design9WhiteBackCar2, teamGroupBanner, design9WhiteGrey1, design9WhiteGrey2, design9WhiteGrey3]
       }
     ]
   },
