@@ -19,13 +19,16 @@ import teamMarket from "@/assets/team-market.jpg";
 import teamSponsors from "@/assets/team-sponsors.jpg";
 import teamCustomers from "@/assets/team-customers.jpg";
 import teamNightEvent from "@/assets/team-night-event.jpg";
-import teamProductDisplay from "@/assets/team-product-display.jpg";
 import teamGroupPhoto from "@/assets/team-group-photo.jpg";
 import teamSneakersDisplay from "@/assets/team-sneakers-display.jpg";
 import teamCertificate from "@/assets/team-certificate.jpg";
 import teamPackagedProducts from "@/assets/team-packaged-products.jpg";
 import teamEventCustomers from "@/assets/team-event-customers.jpg";
 import teamMembersBags from "@/assets/team-members-bags.jpg";
+import teamWhiteRedCarpet2 from "@/assets/design9-white-red-carpet-2.jpg";
+import teamWhiteBackCar from "@/assets/design9-white-back-car.jpg";
+import teamWhiteBackCar2 from "@/assets/design9-white-back-car-2.jpg";
+import teamGroupBanner from "@/assets/team-group-banner.jpg";
 
 const About = () => {
   const journeyImages = [
@@ -40,12 +43,16 @@ const About = () => {
     { src: teamSponsors, alt: "MI VIDA sponsorships" },
     { src: teamCustomers, alt: "Happy MI VIDA customers" },
     { src: teamNightEvent, alt: "MI VIDA night event" },
+    { src: teamWhiteRedCarpet2, alt: "MI VIDA team member on red carpet" },
     { src: teamGroupPhoto, alt: "MI VIDA team photo" },
     { src: teamSneakersDisplay, alt: "MI VIDA sneakers display" },
     { src: teamCertificate, alt: "MI VIDA certificate of appreciation for Miss Summer East London" },
     { src: teamPackagedProducts, alt: "MI VIDA packaged products" },
     { src: teamEventCustomers, alt: "MI VIDA team with happy customers" },
     { src: teamMembersBags, alt: "MI VIDA team members with branded bags" },
+    { src: teamWhiteBackCar, alt: "MI VIDA clothing back design by car" },
+    { src: teamWhiteBackCar2, alt: "MI VIDA clothing styled by car" },
+    { src: teamGroupBanner, alt: "MI VIDA team members holding branded banner" },
   ];
 
   return (

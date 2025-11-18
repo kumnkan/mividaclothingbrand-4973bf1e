@@ -54,6 +54,12 @@ import design9GreyBlack1 from "@/assets/design9-grey-black-1.jpg";
 import design9WhiteGrey1 from "@/assets/design9-white-grey-1.jpg";
 import design9WhiteGrey2 from "@/assets/design9-white-grey-2.jpg";
 import design9WhiteGrey3 from "@/assets/design9-white-grey-3.jpg";
+import design9GreyModel from "@/assets/design9-grey-model.jpg";
+import design9WhiteRedCarpet from "@/assets/design9-white-red-carpet.jpg";
+import design9GreyLive from "@/assets/design9-grey-live.jpg";
+import design9WhiteRedCarpet2 from "@/assets/design9-white-red-carpet-2.jpg";
+import design9WhiteBackCar from "@/assets/design9-white-back-car.jpg";
+import design9WhiteBackCar2 from "@/assets/design9-white-back-car-2.jpg";
 import design10WhiteBlue1 from "@/assets/design10-white-blue-1.jpg";
 import design10WhiteBlue2 from "@/assets/design10-white-blue-2.jpg";
 import design10WhiteBlue3 from "@/assets/design10-white-blue-3.jpg";
@@ -340,7 +346,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Grey",
         secondaryColor: "Black",
         hexCode: "#808080",
-        images: [design9GreyBlack1]
+        images: [design9GreyModel, design9WhiteRedCarpet, design9GreyBlack1]
       },
       {
         id: "design-9-white-grey",
@@ -348,7 +354,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Grey",
         hexCode: "#FFFFFF",
-        images: [design9WhiteGrey1, design9WhiteGrey2, design9WhiteGrey3]
+        images: [design9WhiteRedCarpet, design9WhiteRedCarpet2, design9WhiteBackCar, design9WhiteBackCar2, design9WhiteGrey1, design9WhiteGrey2, design9WhiteGrey3]
       }
     ]
   },
