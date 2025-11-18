@@ -346,7 +346,15 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Grey",
         secondaryColor: "Black",
         hexCode: "#808080",
-        images: [design9GreyModel, design9WhiteRedCarpet, design9GreyBlack1]
+        images: [design9GreyModel, design9GreyBlack1]
+      },
+      {
+        id: "design-9-white-black",
+        name: "White & Black",
+        dominantColor: "White",
+        secondaryColor: "Black",
+        hexCode: "#FFFFFF",
+        images: [design9WhiteRedCarpet, design9WhiteRedCarpet2]
       },
       {
         id: "design-9-white-grey",
@@ -354,7 +362,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Grey",
         hexCode: "#FFFFFF",
-        images: [design9WhiteRedCarpet, design9WhiteRedCarpet2, design9WhiteBackCar, design9WhiteBackCar2, design9WhiteGrey1, design9WhiteGrey2, design9WhiteGrey3]
+        images: [design9WhiteBackCar, design9WhiteBackCar2, design9WhiteGrey1, design9WhiteGrey2, design9WhiteGrey3]
       }
     ]
   },
