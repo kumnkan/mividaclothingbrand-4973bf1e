@@ -26,7 +26,6 @@ import teamPackagedProducts from "@/assets/team-packaged-products.jpg";
 import teamEventCustomers from "@/assets/team-event-customers.jpg";
 import teamMembersBags from "@/assets/team-members-bags.jpg";
 import teamWhiteRedCarpet2 from "@/assets/design9-white-red-carpet-2.jpg";
-import teamWhiteBackCar from "@/assets/design9-white-back-car.jpg";
 import teamWhiteBackCar2 from "@/assets/design9-white-back-car-2.jpg";
 import teamGroupBanner from "@/assets/team-group-banner.jpg";
 
@@ -50,7 +49,6 @@ const About = () => {
     { src: teamPackagedProducts, alt: "MI VIDA packaged products" },
     { src: teamEventCustomers, alt: "MI VIDA team with happy customers" },
     { src: teamMembersBags, alt: "MI VIDA team members with branded bags" },
-    { src: teamWhiteBackCar, alt: "MI VIDA clothing back design by car" },
     { src: teamWhiteBackCar2, alt: "MI VIDA clothing styled by car" },
     { src: teamGroupBanner, alt: "MI VIDA team members holding branded banner" },
   ];
@@ -140,7 +138,7 @@ const About = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt} 
-                        className="w-full h-64 object-cover rounded-lg" 
+                        className="w-full h-80 object-contain rounded-lg bg-muted" 
                       />
                     </div>
                   </CarouselItem>
