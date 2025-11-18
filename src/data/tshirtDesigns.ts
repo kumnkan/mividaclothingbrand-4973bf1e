@@ -150,7 +150,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-3",
     designNumber: 3,
     name: "MI VIDA Bay Breeze",
-    price: 249.99,
+    price: 450,
     description: "Bold graphic designs that make a statement. High-quality print that lasts.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -294,7 +294,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-7",
     designNumber: 7,
     name: "MI VIDA Beach Side",
-    price: 249.99,
+    price: 400,
     description: "Sophisticated black design with white accents. Elegance in simplicity.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -312,7 +312,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-8",
     designNumber: 8,
     name: "MI VIDA Ocean Drive",
-    price: 249.99,
+    price: 450,
     description: "Unique graphic design with artistic flair. Express your style.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -330,7 +330,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-9",
     designNumber: 9,
     name: "MI VIDA Street Style",
-    price: 249.99,
+    price: 350,
     description: "Modern design with bold graphics. Perfect for everyday wear.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -356,7 +356,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-10",
     designNumber: 10,
     name: "MI VIDA Drama Masks",
-    price: 249.99,
+    price: 500,
     description: "Bold artistic design featuring dramatic theater masks. Make a statement with culture and creativity.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [

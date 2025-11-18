@@ -25,7 +25,7 @@ export const hoodieDesigns: HoodieDesign[] = [
     id: "hoodie-design-1",
     designNumber: 1,
     name: "Mi Vida Classic Hoodie",
-    price: 449.99,
+    price: 600,
     description: "Premium heavyweight hoodie with signature Mi Vida branding. Ultra-soft fleece interior for maximum comfort.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
