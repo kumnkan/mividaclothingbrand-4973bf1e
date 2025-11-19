@@ -247,7 +247,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Orange",
         hexCode: "#FF8C00",
-        images: [design4WhiteOrange1, design4WhiteOrange3]
+        images: [design4WhiteOrange2, design4WhiteOrange3]
       },
       {
         id: "design-4-white-skyblue",
