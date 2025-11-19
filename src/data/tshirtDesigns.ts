@@ -22,6 +22,8 @@ import design2WhiteBlue2 from "@/assets/design2-white-blue-2.jpg";
 import design2WhiteRed1 from "@/assets/design2-white-red-1.jpg";
 import design2WhiteRed2 from "@/assets/design2-white-red-2.jpg";
 import design2WhiteRed3 from "@/assets/design2-white-red-3.jpg";
+import design2BlackWhite1 from "@/assets/design2-black-white-1.jpg";
+import design2BlackWhite2 from "@/assets/design2-black-white-2.jpg";
 import design3BlackPink1 from "@/assets/design3-black-pink-1.jpg";
 import design3BlackPink2 from "@/assets/design3-black-pink-2.jpg";
 import design5WhiteBlack1 from "@/assets/design5-white-black-1.jpg";
@@ -162,6 +164,14 @@ export const tshirtDesigns: TShirtDesign[] = [
         secondaryColor: "Red",
         hexCode: "#DC143C",
         images: [design2WhiteRed1, design2WhiteRed2, design2WhiteRed3]
+      },
+      {
+        id: "design-2-black-white",
+        name: "Black & White",
+        dominantColor: "Black",
+        secondaryColor: "White",
+        hexCode: "#000000",
+        images: [design2BlackWhite1, design2BlackWhite2]
       }
     ]
   },
@@ -237,7 +247,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "White",
         secondaryColor: "Orange",
         hexCode: "#FF8C00",
-        images: [design4WhiteOrange1, design4WhiteOrange2, design4WhiteOrange3]
+        images: [design4WhiteOrange1, design4WhiteOrange3]
       },
       {
         id: "design-4-white-skyblue",
