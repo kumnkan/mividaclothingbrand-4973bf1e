@@ -27,6 +27,14 @@ import teamEventCustomers from "@/assets/team-event-customers.jpg";
 import teamMembersBags from "@/assets/team-members-bags.jpg";
 import teamCertificateAward2 from "@/assets/team-certificate-award-2.jpg";
 import teamSponsorBadges from "@/assets/team-sponsor-badges.jpg";
+import teamJourney9 from "@/assets/team-journey-9.jpg";
+import teamJourney10 from "@/assets/team-journey-10.jpg";
+import teamJourney11 from "@/assets/team-journey-11.jpg";
+import teamJourney12 from "@/assets/team-journey-12.jpg";
+import teamJourney13 from "@/assets/team-journey-13.jpg";
+import teamJourney14 from "@/assets/team-journey-14.jpg";
+import teamJourney15 from "@/assets/team-journey-15.jpg";
+import teamJourney16 from "@/assets/team-journey-16.jpg";
 
 const About = () => {
   const journeyImages = [
@@ -50,6 +58,14 @@ const About = () => {
     { src: teamMembersBags, alt: "MI VIDA team members with branded bags" },
     { src: teamCertificateAward2, alt: "MI VIDA certificate of appreciation for sponsoring Miss Summer East London" },
     { src: teamSponsorBadges, alt: "MI VIDA sponsor badges for Miss Summer East London 2024" },
+    { src: teamJourney9, alt: "MI VIDA team with students showcasing T-shirts" },
+    { src: teamJourney10, alt: "MI VIDA team member with students" },
+    { src: teamJourney11, alt: "MI VIDA team with students displaying MI VIDA shirts" },
+    { src: teamJourney12, alt: "MI VIDA team at community event" },
+    { src: teamJourney13, alt: "MI VIDA team members at outreach" },
+    { src: teamJourney14, alt: "MI VIDA team at community drive" },
+    { src: teamJourney15, alt: "MI VIDA team with students and gift bags" },
+    { src: teamJourney16, alt: "MI VIDA team at T. Mafanya Attorneys partnership event" },
   ];
 
   return (

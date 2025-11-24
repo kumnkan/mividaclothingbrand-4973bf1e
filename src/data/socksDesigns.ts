@@ -1,7 +1,5 @@
 import socksWhite1 from "@/assets/socks-white-1.jpg";
 import socksWhite2 from "@/assets/socks-white-2.jpg";
-import socksCategory from "@/assets/socks-category.jpg";
-import teamProductDisplay from "@/assets/team-product-display.jpg";
 
 export interface ColorVariation {
   id: string;
@@ -36,14 +34,14 @@ export const socksDesigns: SocksDesign[] = [
         name: "White",
         dominantColor: "White",
         hexCode: "#FFFFFF",
-        images: [socksWhite1, socksWhite2, socksCategory, teamProductDisplay]
+        images: [socksWhite1, socksWhite2]
       },
       {
         id: "socks-1-black",
         name: "Black",
         dominantColor: "Black",
         hexCode: "#000000",
-        images: [socksCategory, socksWhite1, socksWhite2, teamProductDisplay]
+        images: [socksWhite1, socksWhite2]
       }
     ],
     features: [
