@@ -1,5 +1,5 @@
-import socksDesign1 from "@/assets/socks-design-1.jpg";
-import socksDesign2 from "@/assets/socks-design-2.jpg";
+import socksWhite1 from "@/assets/socks-white-1.jpg";
+import socksWhite2 from "@/assets/socks-white-2.jpg";
 import socksCategory from "@/assets/socks-category.jpg";
 import teamProductDisplay from "@/assets/team-product-display.jpg";
 
@@ -28,22 +28,22 @@ export const socksDesigns: SocksDesign[] = [
     designNumber: 1,
     name: "MI VIDA Classic Socks",
     price: 89.99,
-    description: "Premium MI VIDA branded socks. Comfort meets style with premium materials and the MI VIDA signature design.",
-    sizes: ["1-3", "4-6", "7-9", "10-12"],
+    description: "Premium MI VIDA branded socks. Comfort meets style with premium materials and the MI VIDA signature design. Accommodative sizing for the perfect fit.",
+    sizes: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
     colorVariations: [
       {
         id: "socks-1-white",
         name: "White",
         dominantColor: "White",
         hexCode: "#FFFFFF",
-        images: [socksDesign1, socksDesign2, socksCategory, teamProductDisplay]
+        images: [socksWhite1, socksWhite2, socksCategory, teamProductDisplay]
       },
       {
         id: "socks-1-black",
         name: "Black",
         dominantColor: "Black",
         hexCode: "#000000",
-        images: [socksCategory, socksDesign1, socksDesign2, teamProductDisplay]
+        images: [socksCategory, socksWhite1, socksWhite2, teamProductDisplay]
       }
     ],
     features: [
