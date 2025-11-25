@@ -35,9 +35,11 @@ import teamJourney13 from "@/assets/team-journey-13.jpg";
 import teamJourney14 from "@/assets/team-journey-14.jpg";
 import teamJourney15 from "@/assets/team-journey-15.jpg";
 import teamJourney16 from "@/assets/team-journey-16.jpg";
+import teamWomensDayAnnouncement from "@/assets/team-womens-day-announcement.jpg";
 
 const About = () => {
   const journeyImages = [
+    { src: teamWomensDayAnnouncement, alt: "MI VIDA Women's Day Sanitary Pad Drive Announcement - Supporting women in Mdantsane schools" },
     { src: teamPackaging, alt: "MI VIDA packaging and products" },
     { src: teamPackagingBags, alt: "MI VIDA premium packaging bags" },
     { src: teamBoxes, alt: "MI VIDA branded boxes" },
