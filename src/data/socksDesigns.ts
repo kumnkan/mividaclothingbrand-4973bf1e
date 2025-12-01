@@ -1,5 +1,3 @@
-import socksWhite1 from "@/assets/socks-white-1.jpg";
-import socksWhite2 from "@/assets/socks-white-2.jpg";
 import socksWhite3 from "@/assets/socks-white-3.jpg";
 import socksWhite4 from "@/assets/socks-white-4.jpg";
 
@@ -36,14 +34,14 @@ export const socksDesigns: SocksDesign[] = [
         name: "White",
         dominantColor: "White",
         hexCode: "#FFFFFF",
-        images: [socksWhite1, socksWhite2, socksWhite3, socksWhite4]
+        images: [socksWhite3, socksWhite4]
       },
       {
         id: "socks-1-black",
         name: "Black",
         dominantColor: "Black",
         hexCode: "#000000",
-        images: [socksWhite1, socksWhite2, socksWhite3, socksWhite4]
+        images: [socksWhite3, socksWhite4]
       }
     ],
     features: [
