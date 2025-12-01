@@ -19,7 +19,6 @@ interface TShirtGalleryProps {
 const TShirtGallery = ({ design }: TShirtGalleryProps) => {
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string>("");
-  const [mainImageIndex, setMainImageIndex] = useState(0);
   const { addItem, openCart } = useCart();
   const { toast } = useToast();
 
@@ -61,7 +60,7 @@ const TShirtGallery = ({ design }: TShirtGalleryProps) => {
         {/* Image Gallery */}
         <div>
           {/* Main Image Carousel */}
-          <Carousel className="w-full mb-4">
+          <Carousel className="w-full">
             <CarouselContent>
               {currentColor.images.map((image, idx) => (
                 <CarouselItem key={idx}>
@@ -69,7 +68,7 @@ const TShirtGallery = ({ design }: TShirtGalleryProps) => {
                     <img
                       src={image}
                       alt={`${design.name} - ${currentColor.name} - View ${idx + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </CarouselItem>
@@ -78,25 +77,6 @@ const TShirtGallery = ({ design }: TShirtGalleryProps) => {
             <CarouselPrevious className="left-4" />
             <CarouselNext className="right-4" />
           </Carousel>
-
-          {/* Thumbnail Gallery */}
-          <div className="grid grid-cols-4 gap-2">
-            {currentColor.images.map((image, idx) => (
-              <button
-                key={idx}
-                onClick={() => setMainImageIndex(idx)}
-                className={`aspect-square bg-secondary rounded-lg overflow-hidden border-2 transition-all ${
-                  mainImageIndex === idx ? "border-primary" : "border-transparent"
-                }`}
-              >
-                <img
-                  src={image}
-                  alt={`View ${idx + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform"
-                />
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Product Details */}
@@ -115,10 +95,7 @@ const TShirtGallery = ({ design }: TShirtGalleryProps) => {
               {design.colorVariations.map((color, idx) => (
                 <button
                   key={color.id}
-                  onClick={() => {
-                    setSelectedColorIndex(idx);
-                    setMainImageIndex(0);
-                  }}
+                  onClick={() => setSelectedColorIndex(idx)}
                   className={`group relative`}
                   title={color.name}
                 >

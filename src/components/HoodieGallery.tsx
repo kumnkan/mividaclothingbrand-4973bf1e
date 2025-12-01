@@ -19,7 +19,6 @@ interface HoodieGalleryProps {
 const HoodieGallery = ({ design }: HoodieGalleryProps) => {
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string>("");
-  const [mainImageIndex, setMainImageIndex] = useState(0);
   const { addItem, openCart } = useCart();
   const { toast } = useToast();
 
@@ -56,7 +55,7 @@ const HoodieGallery = ({ design }: HoodieGalleryProps) => {
   return (
     <div className="grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Left Column - Images */}
-      <div className="space-y-4">
+      <div>
         {/* Main Carousel */}
         <div className="relative bg-secondary rounded-lg overflow-hidden aspect-square">
           <Carousel className="w-full h-full">
@@ -66,7 +65,7 @@ const HoodieGallery = ({ design }: HoodieGalleryProps) => {
                   <img
                     src={image}
                     alt={`${design.name} - ${selectedColor.name} - View ${index + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </CarouselItem>
               ))}
@@ -74,27 +73,6 @@ const HoodieGallery = ({ design }: HoodieGalleryProps) => {
             <CarouselPrevious className="left-4" />
             <CarouselNext className="right-4" />
           </Carousel>
-        </div>
-
-        {/* Thumbnail Images */}
-        <div className="grid grid-cols-4 gap-2">
-          {selectedColor.images.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setMainImageIndex(index)}
-              className={`relative bg-secondary rounded-lg overflow-hidden aspect-square border-2 transition-colors ${
-                mainImageIndex === index
-                  ? "border-primary"
-                  : "border-transparent hover:border-muted-foreground/50"
-              }`}
-            >
-              <img
-                src={image}
-                alt={`${design.name} thumbnail ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
         </div>
       </div>
 
@@ -118,10 +96,7 @@ const HoodieGallery = ({ design }: HoodieGalleryProps) => {
             {design.colorVariations.map((color, index) => (
               <button
                 key={color.id}
-                onClick={() => {
-                  setSelectedColorIndex(index);
-                  setMainImageIndex(0);
-                }}
+                onClick={() => setSelectedColorIndex(index)}
                 className="group relative"
                 title={color.name}
               >
