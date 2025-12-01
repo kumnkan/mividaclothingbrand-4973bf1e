@@ -81,7 +81,6 @@ const TShirtGallery = ({ design }: TShirtGalleryProps) => {
 
         {/* Product Details */}
         <div>
-          <Badge className="mb-2">Design {design.designNumber}</Badge>
           <h2 className="text-3xl font-bold mb-2">{design.name}</h2>
           <p className="text-2xl font-bold text-primary mb-4">R{design.price.toFixed(2)}</p>
           <p className="text-muted-foreground mb-6">{design.description}</p>
