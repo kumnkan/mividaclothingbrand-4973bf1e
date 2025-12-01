@@ -58,15 +58,15 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
         {/* Left Column - Images */}
         <div>
           {/* Main Carousel */}
-          <div className="relative bg-secondary rounded-lg overflow-hidden aspect-square">
-            <Carousel className="w-full h-full">
+          <div className="relative bg-secondary rounded-lg overflow-hidden">
+            <Carousel className="w-full">
               <CarouselContent>
                 {selectedColor.images.map((image, index) => (
                   <CarouselItem key={index}>
                     <img
                       src={image}
                       alt={`${design.name} - ${selectedColor.name} - View ${index + 1}`}
-                      className="w-full h-full object-contain"
+                      className="w-full h-auto object-contain"
                     />
                   </CarouselItem>
                 ))}
