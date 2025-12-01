@@ -19,7 +19,6 @@ interface SocksGalleryProps {
 const SocksGallery = ({ design }: SocksGalleryProps) => {
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string>("");
-  const [mainImageIndex, setMainImageIndex] = useState(0);
   const { addItem, openCart } = useCart();
   const { toast } = useToast();
 
@@ -57,7 +56,7 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
     <div className="container-custom py-8">
       <div className="grid md:grid-cols-2 gap-8 md:gap-12">
         {/* Left Column - Images */}
-        <div className="space-y-4">
+        <div>
           {/* Main Carousel */}
           <div className="relative bg-secondary rounded-lg overflow-hidden aspect-square">
             <Carousel className="w-full h-full">
@@ -75,27 +74,6 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
               <CarouselPrevious className="left-4" />
               <CarouselNext className="right-4" />
             </Carousel>
-          </div>
-
-          {/* Thumbnail Images */}
-          <div className="grid grid-cols-4 gap-2">
-            {selectedColor.images.map((image, idx) => (
-              <button
-                key={idx}
-                onClick={() => setMainImageIndex(idx)}
-                className={`relative bg-secondary rounded-lg overflow-hidden aspect-square border-2 transition-colors ${
-                  mainImageIndex === idx
-                    ? "border-primary"
-                    : "border-transparent hover:border-muted-foreground/50"
-                }`}
-              >
-                <img
-                  src={image}
-                  alt={`View ${idx + 1}`}
-                  className="w-full h-full object-contain"
-                />
-              </button>
-            ))}
           </div>
         </div>
 
@@ -120,10 +98,7 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
               {design.colorVariations.map((color, idx) => (
                 <button
                   key={color.id}
-                  onClick={() => {
-                    setSelectedColorIndex(idx);
-                    setMainImageIndex(0);
-                  }}
+                  onClick={() => setSelectedColorIndex(idx)}
                   className="group relative"
                   title={color.name}
                 >
