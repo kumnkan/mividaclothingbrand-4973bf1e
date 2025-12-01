@@ -36,9 +36,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <p className="font-bold">R{product.price.toFixed(2)}</p>
         {product.colors && product.colors.length > 0 && (
           <div className="flex gap-1 mt-2">
-            {product.colors.map((color) => (
+            {product.colors.map((color, index) => (
               <div
-                key={color}
+                key={`${product.id}-${color}-${index}`}
                 className="w-4 h-4 rounded-full border border-border"
                 style={{ backgroundColor: color }}
                 title={color}
