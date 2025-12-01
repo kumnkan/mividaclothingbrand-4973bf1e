@@ -80,7 +80,6 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
         {/* Right Column - Product Details */}
         <div className="space-y-6">
           <div>
-            <Badge className="mb-2">Socks Collection</Badge>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">{design.name}</h1>
             <p className="text-2xl font-bold text-primary">
               R{design.price.toFixed(2)}
