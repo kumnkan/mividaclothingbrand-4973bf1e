@@ -23,7 +23,7 @@ export const products: Product[] = [
   {
     id: "design-5",
     name: "MI VIDA Wave Rider",
-    price: 249.99,
+    price: 349.99,
     image: design5WhiteBlack1,
     category: "T-Shirts",
     colors: ["#FFFFFF", "#000000"],
@@ -35,7 +35,7 @@ export const products: Product[] = [
   {
     id: "design-7",
     name: "MI VIDA Beach Side",
-    price: 249.99,
+    price: 349.99,
     image: design7BlackWhite1,
     category: "T-Shirts",
     colors: ["#000000", "#FFFFFF"],
