@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/contexts/CartContext";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -22,24 +21,24 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
   const { addItem, openCart } = useCart();
   const { toast } = useToast();
 
-  const selectedColor = design.colorVariations[selectedColorIndex];
+  const currentColor = design.colorVariations[selectedColorIndex];
 
   const handleAddToCart = () => {
     if (!selectedSize) {
       toast({
         title: "Please select a size",
-        description: "Choose your shoe size before adding to cart",
+        description: "Choose a size before adding to cart",
         variant: "destructive",
       });
       return;
     }
 
     addItem({
-      id: `${design.id}-${selectedColor.id}-${selectedSize}`,
-      name: design.name,
+      id: currentColor.id,
+      name: `${design.name} - ${currentColor.name}`,
       price: design.price,
-      image: selectedColor.images[0],
-      color: selectedColor.name,
+      image: currentColor.images[0],
+      color: currentColor.name,
       size: selectedSize,
       quantity: 1,
     });
@@ -48,57 +47,54 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
     
     toast({
       title: "Added to cart!",
-      description: `${design.name} - ${selectedColor.name} (Size ${selectedSize})`,
+      description: `${design.name} in ${currentColor.name}, size ${selectedSize}`,
     });
+
+    setSelectedSize("");
   };
 
   return (
-    <div className="container-custom py-8">
-      <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-        {/* Left Column - Images */}
+    <div className="bg-card rounded-lg p-6 mb-8 border border-border">
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Image Gallery */}
         <div>
-          {/* Main Carousel */}
-          <div className="relative bg-secondary rounded-lg overflow-hidden">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {selectedColor.images.map((image, index) => (
-                  <CarouselItem key={index}>
+          {/* Main Image Carousel */}
+          <Carousel className="w-full">
+            <CarouselContent>
+              {currentColor.images.map((image, idx) => (
+                <CarouselItem key={idx}>
+                  <div className="aspect-square bg-secondary rounded-lg overflow-hidden">
                     <img
                       src={image}
-                      alt={`${design.name} - ${selectedColor.name} - View ${index + 1}`}
-                      className="w-full h-auto object-contain"
+                      alt={`${design.name} - ${currentColor.name} - View ${idx + 1}`}
+                      className="w-full h-full object-contain"
                     />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-4" />
-              <CarouselNext className="right-4" />
-            </Carousel>
-          </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
 
-        {/* Right Column - Product Details */}
-        <div className="space-y-6">
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">{design.name}</h1>
-            <p className="text-2xl font-bold text-primary">
-              R{design.price.toFixed(2)}
-            </p>
-          </div>
-
-          <p className="text-muted-foreground">{design.description}</p>
+        {/* Product Details */}
+        <div>
+          <h2 className="text-3xl font-bold mb-2">{design.name}</h2>
+          <p className="text-2xl font-bold text-primary mb-4">R{design.price.toFixed(2)}</p>
+          <p className="text-muted-foreground mb-6">{design.description}</p>
 
           {/* Color Selection */}
-          <div>
+          <div className="mb-6">
             <h3 className="font-bold mb-3">
-              Color: <span className="text-primary">{selectedColor.name}</span>
+              Color: <span className="text-primary">{currentColor.name}</span>
             </h3>
             <div className="flex gap-2 flex-wrap">
               {design.colorVariations.map((color, idx) => (
                 <button
                   key={color.id}
                   onClick={() => setSelectedColorIndex(idx)}
-                  className="group relative"
+                  className={`group relative`}
                   title={color.name}
                 >
                   <div
@@ -118,10 +114,8 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
           </div>
 
           {/* Size Selection */}
-          <div>
-            <label className="text-sm font-medium mb-3 block">
-              Size (SA Shoe Size): {selectedSize || "Select a size"}
-            </label>
+          <div className="mb-6">
+            <h3 className="font-bold mb-3">Select Size (SA Shoe Size)</h3>
             <div className="flex gap-2 flex-wrap">
               {design.sizes.map((size) => (
                 <Button
@@ -136,29 +130,24 @@ const SocksGallery = ({ design }: SocksGalleryProps) => {
             </div>
           </div>
 
-          {/* Add to Cart Button */}
+          {/* Add to Cart */}
           <Button
-            size="lg"
-            className="w-full"
             onClick={handleAddToCart}
+            size="lg"
+            className="w-full mb-4"
           >
             Add to Cart
           </Button>
 
-          {/* Features */}
-          {design.features && design.features.length > 0 && (
-            <div className="border-t border-border pt-6">
-              <h3 className="font-medium mb-3">Product Features</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                {design.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="font-bold text-foreground">✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          {/* Product Info */}
+          <div className="space-y-3 text-sm">
+            {design.features.map((feature, idx) => (
+              <div key={idx} className="flex items-start gap-2">
+                <span className="font-bold">✓</span>
+                <span className="text-muted-foreground">{feature}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
