@@ -95,7 +95,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-1",
     designNumber: 1,
     name: "MI VIDA Coast Line",
-    price: 249.99,
+    price: 349.99,
     description: "Our signature design with multiple stunning color combinations. Premium cotton blend for ultimate comfort.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -145,7 +145,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-2",
     designNumber: 2,
     name: "MI VIDA Sunrise",
-    price: 249.99,
+    price: 349.99,
     description: "Fresh and vibrant designs perfect for any occasion. Soft, breathable fabric.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -197,7 +197,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-4",
     designNumber: 4,
     name: "MI VIDA Horizon",
-    price: 249.99,
+    price: 349.99,
     description: "Our most versatile design with an extensive color palette. Find your perfect match.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -287,7 +287,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-5",
     designNumber: 5,
     name: "MI VIDA Wave Rider",
-    price: 249.99,
+    price: 349.99,
     description: "Timeless black and white combination. A wardrobe essential.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [
@@ -305,7 +305,7 @@ export const tshirtDesigns: TShirtDesign[] = [
     id: "design-6",
     designNumber: 6,
     name: "MI VIDA City Soul",
-    price: 249.99,
+    price: 349.99,
     description: "Bold contrast design for those who stand out. Premium quality guaranteed.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     colorVariations: [

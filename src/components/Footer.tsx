@@ -10,6 +10,7 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Shop</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/tshirts" className="hover:text-foreground">T-Shirts</Link></li>
+              <li><Link to="/hoodies" className="hover:text-foreground">Hoodies</Link></li>
               <li><Link to="/socks" className="hover:text-foreground">Socks</Link></li>
               <li><Link to="/new-arrivals" className="hover:text-foreground">New Arrivals</Link></li>
             </ul>
