@@ -4,13 +4,13 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { getNewArrivals, getProductsByCategory } from "@/data/products";
+import { getNewArrivals } from "@/data/products";
 import { tshirtDesigns } from "@/data/tshirtDesigns";
 import { hoodieDesigns } from "@/data/hoodieDesigns";
+import { socksDesigns } from "@/data/socksDesigns";
 
 const Index = () => {
   const newArrivals = getNewArrivals();
-  const sockProducts = getProductsByCategory("socks");
   
   // Convert tshirt designs to product format for display - showing only designs 1, 4, and 2
   const featuredTshirtDesigns = tshirtDesigns.filter(design => 
@@ -34,6 +34,16 @@ const Index = () => {
     price: design.price,
     image: design.colorVariations[0].images[0],
     category: "Hoodies",
+    colors: design.colorVariations.map(v => v.hexCode)
+  }));
+
+  // Convert socks designs to product format for display (matching t-shirts and hoodies)
+  const socksProducts = socksDesigns.map(design => ({
+    id: design.id,
+    name: design.name,
+    price: design.price,
+    image: design.colorVariations[0].images[0],
+    category: "Socks",
     colors: design.colorVariations.map(v => v.hexCode)
   }));
 
@@ -121,9 +131,14 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
-            {sockProducts.map((product) => (
+            {socksProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild size="lg">
+              <Link to="/socks">Shop Socks</Link>
+            </Button>
           </div>
         </div>
       </section>
