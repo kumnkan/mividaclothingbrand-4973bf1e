@@ -209,7 +209,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Milky Coffee",
         secondaryColor: "Grey",
         hexCode: "#D2B48C",
-        images: [design1MilkyGreyLive, design4MilkyGrey1]
+        images: [design1MilkyGreyLive]
       },
       {
         id: "design-4-black-grey",
