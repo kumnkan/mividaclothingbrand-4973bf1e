@@ -220,14 +220,6 @@ export const tshirtDesigns: TShirtDesign[] = [
         images: [design1BlackGreyLive]
       },
       {
-        id: "design-4-milky-brown",
-        name: "Milky Coffee & Brown",
-        dominantColor: "Milky Coffee",
-        secondaryColor: "Brown",
-        hexCode: "#D2B48C",
-        images: [mensImage, womensImage, mensImage, womensImage]
-      },
-      {
         id: "design-4-black-white",
         name: "Black & White",
         dominantColor: "Black",
@@ -258,14 +250,6 @@ export const tshirtDesigns: TShirtDesign[] = [
         secondaryColor: "Sky Blue",
         hexCode: "#87CEEB",
         images: [design4WhiteBlue1, design4WhiteBlue2, design4WhiteBlue3, design4WhiteBlue4]
-      },
-      {
-        id: "design-4-milky-black",
-        name: "Milky Coffee & Black",
-        dominantColor: "Milky Coffee",
-        secondaryColor: "Black",
-        hexCode: "#D2B48C",
-        images: [mensImage, womensImage, mensImage, womensImage]
       },
       {
         id: "design-4-brown-milky",
