@@ -1,5 +1,3 @@
-import mensImage from "@/assets/mens-category.jpg";
-import womensImage from "@/assets/womens-category.jpg";
 import design1WhiteBlue1 from "@/assets/design1-white-blue-1.jpg";
 import design1WhiteBlue2 from "@/assets/design1-white-blue-2.jpg";
 import design1WhiteBlue3 from "@/assets/design1-white-blue-3.jpg";
