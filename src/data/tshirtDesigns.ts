@@ -70,6 +70,8 @@ import teamGroupBanner from "@/assets/team-group-banner.jpg";
 import design10WhiteBlue1 from "@/assets/design10-white-blue-1.jpg";
 import design10WhiteBlue2 from "@/assets/design10-white-blue-2.jpg";
 import design10WhiteBlue3 from "@/assets/design10-white-blue-3.jpg";
+import design1MilkyGreyLive from "@/assets/design1-milky-grey-live.png";
+import design1BlackGreyLive from "@/assets/design1-black-grey-live.png";
 
 export interface ColorVariation {
   id: string;
@@ -196,7 +198,7 @@ export const tshirtDesigns: TShirtDesign[] = [
   {
     id: "design-4",
     designNumber: 4,
-    name: "MI VIDA Horizon",
+    name: "MI VIDA Alive",
     price: 349.99,
     description: "Our most versatile design with an extensive color palette. Find your perfect match.",
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
@@ -207,7 +209,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Milky Coffee",
         secondaryColor: "Grey",
         hexCode: "#D2B48C",
-        images: [design4MilkyGrey1]
+        images: [design1MilkyGreyLive, design4MilkyGrey1]
       },
       {
         id: "design-4-black-grey",
@@ -215,7 +217,7 @@ export const tshirtDesigns: TShirtDesign[] = [
         dominantColor: "Black",
         secondaryColor: "Grey",
         hexCode: "#000000",
-        images: [mensImage, womensImage, mensImage, womensImage]
+        images: [design1BlackGreyLive]
       },
       {
         id: "design-4-milky-brown",
