@@ -256,14 +256,6 @@ export const tshirtDesigns: TShirtDesign[] = [
         secondaryColor: "Milky Coffee",
         hexCode: "#8B4513",
         images: [design4BrownMilky1, design4BrownMilky2, design4BrownMilky3]
-      },
-      {
-        id: "design-4-milky-black",
-        name: "Milky Coffee & Black",
-        dominantColor: "Milky Coffee",
-        secondaryColor: "Black",
-        hexCode: "#D2B48C",
-        images: [design4MilkyBlack1, design4MilkyBlack2, design4MilkyBlack3]
       }
     ]
   },
